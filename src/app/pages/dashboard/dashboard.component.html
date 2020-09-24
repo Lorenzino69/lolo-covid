@@ -1,0 +1,392 @@
+<div class="container-fluid">
+  <div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
+    class="modal fade d-block" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center pt-4">
+
+          <div *ngIf="modalStep == 1" class="modal-step" [@fadeInOutAnimation]>
+            <img src="assets/images/step-1.png" width="125">
+            <h5 class="text-white mt-3">SAVOIR COMMENT <span class="text-blue"> IL SE PROPAGE</span></h5>
+            <h6 class="text-white">
+              Il n'y a actuellement aucun vaccin pour prévenir le <span class="text-danger">COVID-19</span>
+            </h6>
+            <p>Le virus se propage principalement par contact de personne à personne ainsi que
+              par les gouttelettes respiratoires produites lorsqu'une personne infectée tousse ou éternue.</p>
+          </div>
+          <div *ngIf="modalStep == 2" class="modal-step" [@fadeInOutAnimation]>
+            <img src="assets/images/step-2.png" width="125">
+            <h5 class="text-white mt-3">PRENEZ DES MESURES POUR <span class="text-blue">VOUS PROTÉGER</span></h5>
+            <p>
+              Lavez-vous fréquemment les mains à l'eau et au savon pendant au moins 20 secondes. Ayez toujours un désinfectant pour les mains
+              qui contient au moins 60% d'alcool.
+              Évitez de vous toucher les yeux, le nez et la bouche avec des mains non lavées.</p>
+          </div>
+          <div *ngIf="modalStep == 3" class="modal-step" [@fadeInOutAnimation]>
+            <img src="assets/images/step-3.png" width="125">
+            <h5 class="text-white mt-3">ÉVITEZ  <span class="text-blue">TOUT CONTACT RAPPROCHE</span></h5>
+            <p>Évitez tout contact rapproché avec des personnes malades. Mettez de la distance entre vous et les autres si
+              le COVID-19 se propage dans votre communauté.</p>
+
+          </div>
+          <div *ngIf="modalStep == 4" class="modal-step" [@fadeInOutAnimation]>
+            <img src="assets/images/step-4.png" width="125">
+            <h5 class="text-white mt-3">PRENEZ DES MESURES POUR <span class="text-blue">VOUS PROTÉGER</span></h5>
+            <p>
+              Couvrez-vous la bouche et le nez avec un mouchoir en papier lorsque vous toussez ou éternuez ou utilisez l'intérieur de votre coude.
+              Lavez-vous immédiatement les mains à l'eau et au savon pendant au moins 20 secondes ou nettoyez-vous les mains avec un
+              désinfectant pour les mains contenant au moins 60% d'alcool.
+            </p>
+          </div>
+          <div *ngIf="modalStep == 5" class="modal-step" [@fadeInOutAnimation]>
+            <img src="assets/images/step-5.png" width="125">
+            <h5 class="text-white mt-3">Nettoyez & <span class="text-blue">DESINFECTER</span></h5>
+            <p>
+              Nettoyez et désinfectez quotidiennement les surfaces fréquemment touchées. Cela comprend les tables, les poignées de porte, les interrupteurs d'éclairage,
+              comptoirs, poignées, bureaux, téléphones, claviers, toilettes, robinets et éviers.
+              Si les surfaces sont sales, nettoyez-les: Utilisez un détergent ou du savon et de l'eau avant la désinfection.
+            </p>
+          </div>
+          <div class="col-12 text-center" *ngIf="modalStep!=5">
+            <button (click)="nextStep()" class="btn btn-secondary waves-effect waves-light mb-4"><span>Next
+              </span><i class="fa fa-arrow-right mr-1"></i></button>
+          </div>
+          <div class="col-12 text-center" *ngIf="modalStep==5">
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="forDontShow" #dontShow>
+                <label class="custom-control-label" for="forDontShow">Ne plus montrer</label>
+              </div>
+            </div>
+            <button (click)="close(dontShow.checked)" class="btn btn-blue waves-effect waves-light mb-4"><i class="fas fa-times-circle mr-1"></i><span> Fermer</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">Infections</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+
+            <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2"><i class="mdi mdi-trending-up"></i>
+            </span>
+            <h2 class="font-weight-normal"> {{totalCases | number}} </h2>
+            <p class="text-muted">{{todayCases}} aujourd'hui</p>
+          </div>
+          <div class="progress progress-bar-alt-blue progress-sm m-0">
+            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">Morts</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+            <span
+              class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%
+              <i class="mdi mdi-trending-up"></i> </span>
+            <h2 class="font-weight-normal"> {{totalDeaths | number}} </h2>
+            <p class="text-muted">{{todayDeaths}} today</p>
+          </div>
+          <div class="progress progress-bar-alt-danger progress-sm m-0">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">Récupérations</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+            <span
+              class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%
+              <i class="mdi mdi-trending-up"></i> </span>
+            <h2 class="font-weight-normal"> {{totalRecoveries | number}} </h2>
+            <p class="text-muted">{{activeCases | number}} restant</p>
+          </div>
+          <div class="progress progress-bar-alt-success progress-sm m-0">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+
+    <div class="col-xl-3 col-md-6 col-6">
+      <div class="card-box">
+        <h4 class="header-title m-0 text-md-left text-center">Critique</h4>
+
+        <div class="topBoxes">
+          <div class="fa-3x text-center" [class.d-none]="!isLoading">
+            <i class="fas fa-circle-notch fa-spin m-2"></i>
+          </div>
+          <div class="topBoxesDetails text-md-right text-center" [class.d-none]="isLoading">
+            <span
+              class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(totalCritical / activeCases * 100) | number:'.1-2'}}%
+              <i class="mdi mdi-trending-up"></i> </span>
+            <h2 class="font-weight-normal"> {{totalCritical | number}} </h2>
+            <p class="text-muted">{{casesPer1M | number}} par million</p>
+          </div>
+          <div class="progress progress-bar-alt-warning progress-sm m-0">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+              aria-valuemax="100" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end col -->
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-xl-4">
+      <div class="card-box">
+        <div class="float-right">
+          <p>Statistiques du jour</p>
+        </div>
+
+        <h4 class="header-title mb-3">Pays Affectés</h4>
+        <div class="form-group row">
+          <div class="col-md-8 col-8">
+            <input type="text" id="example-placeholder" #search (keyup)="searchCountries(search.value)"
+              class="form-control" placeholder="Rechercher {{countries.length}} Pays Affectés">
+          </div>
+          <div class="col-md-4 col-4">
+            <select class="custom-select" #sortBy (change)="sortCountries(sortBy.value,search.value)">
+              <option selected="" disabled>Trier par</option>
+              <option value="cases">Total cas</option>
+              <option value="todayCases">Today cas</option>
+              <option value="deaths">Total Morts</option>
+              <option value="todayDeaths">Total Morts</option>
+              <option value="recovered">Total Guérisons</option>
+            </select>
+          </div>
+        </div>
+        <div class="fa-3x text-center" [class.d-none]="!isLoadingCountries">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="infectedCountries" [class.d-none]="isLoadingCountries">
+          <perfect-scrollbar #perfectscrollbar style="height:346px;">
+            <div class="infectedCountry" *ngFor="let country of countries">
+              <a [routerLink]="[ '/country', country.country.toLowerCase() ]">
+                <div class="infectedCountryFlag">
+                  <img *ngIf="countryCodes[country.country] else unknown" style="height: 30px;
+                width: 40px;" src="assets/flags/{{countryCodes[country.country].toLowerCase()}}.svg"
+                    alt="{{country.country}}">
+                  <ng-template #unknown>
+                    <img src="assets/flags/unknown.svg" alt="{{country.country}}">
+                  </ng-template>
+                </div>
+                <h5 class="infectedCountryName mt-0 mb-1">{{country.country}}</h5>
+                <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">{{country.cases}}
+                    Cas</span> & <span class="text-danger">{{country.deaths}} Morts</span></p>
+                <p class="infectedCountryCases text-blue">+{{country.todayCases}} Cas</p>
+                <p class="infectedCountryDeaths text-danger">+{{country.todayDeaths}} Morts</p>
+              </a>
+            </div>
+          </perfect-scrollbar>
+
+
+        </div>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-xl-8">
+      <div class="card-box">
+        <div class="float-md-right float-right d-md-inline d-none">
+          <button type="button" class="btn btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('cases');">cas</button>
+          <button type="button" class="btn btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('deaths')">Morts</button>
+          <button type="button" class="btn btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('recovered')">Guéris</button>
+          <button type="button" class="btn btn-xs btn-lighten-warning waves-effect waves-light width-xs"
+            (click)="loadMap('critical')">Critique</button>
+        </div>
+        <h4 class="header-title mt-0 mb-3 mt-md-0">Infections Mondiale<button type="button" class="btn btn-xs btn-lighten-secondary waves-effect waves-light width-xs mr-md-1 mr-0"
+          (click)="showModal();">Comment l'empêcher?</button></h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoadingMap">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="table-responsive" [class.d-none]="isLoadingMap">
+          <div id="worldChart" style="width: 100%; height: 400px; overflow: hidden"></div>
+        </div>
+        <div class="float-right d-md-none d-inline">
+          <button type="button"
+            class="btn btn-block btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('cases');">cas</button>
+          <button type="button"
+            class="btn btn-block btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('deaths')">Morts</button>
+          <button type="button"
+            class="btn btn-block btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
+            (click)="loadMap('recovered')">Guéris</button>
+          <button type="button" class="btn btn-block btn-xs btn-lighten-warning waves-effect waves-light width-xs"
+            (click)="loadMap('critical')">Critique</button>
+        </div>
+      </div>
+    </div><!-- end col -->
+
+  </div>
+  <div class="row">
+    <div class="col-xl-4">
+      <div class="card-box">
+        <h4 class="header-title mb-3">Répartition </h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoading">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="inbox-widget" [class.d-none]="isLoading">
+
+          <div id="radarChart" style="width: 100%; height: 400px"></div>
+
+        </div>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-xl-8">
+      <div class="card-box">
+        <div class="float-md-right float-right d-md-inline d-none">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="enableLogarithmicScale" #enableLogarithmicScale (change)="loadLineChart(enableLogarithmicScale.checked)"
+            >
+            <label class="custom-control-label" for="enableLogarithmicScale">Activer l'échelle logarithmique</label>
+          </div>
+        </div>
+        <h4 class="header-title mt-0 mb-3 mt-md-0">Historique des Infections</h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoading">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="table-responsive" [class.d-none]="isLoading">
+          <div id="lineChart" style="width: 100%; height: 400px; overflow: hidden"></div>
+        </div>
+      </div>
+    </div><!-- end col -->
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-xl-4">
+      <div class="card-box">
+        <h4 class="header-title mb-3">Répartition des infections par pays</h4>
+        <div class="fa-3x text-center" [class.d-none]="!isLoading">
+          <i class="fas fa-circle-notch fa-spin m-2"></i>
+        </div>
+        <div class="inbox-widget" [class.d-none]="isLoading">
+
+          <div id="pieChart" style="width: 100%; height: 300px"></div>
+
+        </div>
+      </div>
+    </div><!-- end col -->
+
+    <div class="col-xl-5">
+      <div class="card-box">
+
+        <h4 class="header-title mt-0 mb-3">Répartition des infections</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-blue"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-success">
+                      {{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%</h2>
+                    <h5>Taux de guérison</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-danger"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-danger">
+                      {{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%</h2>
+                    <h5>Taux de mortalité</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-warning"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-warning">
+                      {{(totalCritical / activeCases * 100) | number:'.1-2'}}%</h2>
+                    <h5>Taux de criticité</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 col-md-6">
+                <div class="card-box widget-user bg-d">
+                  <div class="text-center">
+                    <div class="fa-3x text-center" [class.d-none]="!isLoading">
+                      <i class="fas fa-circle-notch fa-spin m-2 text-info"></i>
+                    </div>
+                    <h2 [class.d-none]="isLoading" class="font-weight-normal text-info" *ngIf="fuse">
+                      {{fuse.list.length}}</h2>
+                    <h5>Pays Affectés</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- end col -->
+    <div class="col-xl-3">
+      <div class="card-box text-center">
+        <h5>Outbreak Started</h5>
+        <app-countup></app-countup>
+      </div>
+      <div class="card-box text-center">
+        <h5>Partagez avec vos amis, votre famille ou vos collègues.</h5>
+        <p>Tenez-les au courant de l'épidémie de coronavirus.</p>
+        <a href="https://ko-fi.com/lolo69" class="btn btn- waves-effect btn-danger d-block mt-1 mx-auto"> <i
+            class="fas fa-coffee"></i> Achetez moi un café </a>
+      </div>
+    </div><!-- end col -->
+
+  </div>
+
+</div> <!-- end container -->
