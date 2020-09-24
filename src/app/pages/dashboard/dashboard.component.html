@@ -7,58 +7,48 @@
 
           <div *ngIf="modalStep == 1" class="modal-step" [@fadeInOutAnimation]>
             <img src="assets/images/step-1.png" width="125">
-            <h5 class="text-white mt-3">SAVOIR COMMENT <span class="text-blue"> IL SE PROPAGE</span></h5>
-            <h6 class="text-white">
-              Il n'y a actuellement aucun vaccin pour prévenir le <span class="text-danger">COVID-19</span>
+            <h5 class="text-white mt-3">{{ 'Shared.HowToPrevent.Slide1.1' | translate }} <span class="text-blue">{{ 'Shared.HowToPrevent.Slide1.2' | translate }}</span></h5>
+            <h6 class="text-white">{{ 'Shared.HowToPrevent.Slide1.3' | translate }} <span class="text-danger">{{ 'Shared.HowToPrevent.Slide1.4' | translate }}</span>
             </h6>
-            <p>Le virus se propage principalement par contact de personne à personne ainsi que
-              par les gouttelettes respiratoires produites lorsqu'une personne infectée tousse ou éternue.</p>
+            <p>{{ 'Shared.HowToPrevent.Slide1.5' | translate }}</p>
           </div>
           <div *ngIf="modalStep == 2" class="modal-step" [@fadeInOutAnimation]>
             <img src="assets/images/step-2.png" width="125">
-            <h5 class="text-white mt-3">PRENEZ DES MESURES POUR <span class="text-blue">VOUS PROTÉGER</span></h5>
-            <p>
-              Lavez-vous fréquemment les mains à l'eau et au savon pendant au moins 20 secondes. Ayez toujours un désinfectant pour les mains
-              qui contient au moins 60% d'alcool.
-              Évitez de vous toucher les yeux, le nez et la bouche avec des mains non lavées.</p>
+            <h5 class="text-white mt-3">{{ 'Shared.HowToPrevent.Slide2.1' | translate }} <span class="text-blue">{{ 'Shared.HowToPrevent.Slide2.2' | translate }}</span></h5>
+            <p>{{ 'Shared.HowToPrevent.Slide2.3' | translate }}</p>
           </div>
           <div *ngIf="modalStep == 3" class="modal-step" [@fadeInOutAnimation]>
             <img src="assets/images/step-3.png" width="125">
-            <h5 class="text-white mt-3">ÉVITEZ  <span class="text-blue">TOUT CONTACT RAPPROCHE</span></h5>
-            <p>Évitez tout contact rapproché avec des personnes malades. Mettez de la distance entre vous et les autres si
-              le COVID-19 se propage dans votre communauté.</p>
+            <h5 class="text-white mt-3">{{ 'Shared.HowToPrevent.Slide3.1' | translate }} <span class="text-blue">{{ 'Shared.HowToPrevent.Slide3.2' | translate }}</span></h5>
+            <p>{{ 'Shared.HowToPrevent.Slide3.3' | translate }}</p>
 
           </div>
           <div *ngIf="modalStep == 4" class="modal-step" [@fadeInOutAnimation]>
             <img src="assets/images/step-4.png" width="125">
-            <h5 class="text-white mt-3">PRENEZ DES MESURES POUR <span class="text-blue">VOUS PROTÉGER</span></h5>
+            <h5 class="text-white mt-3">{{ 'Shared.HowToPrevent.Slide4.1' | translate }} <span class="text-blue">{{ 'Shared.HowToPrevent.Slide4.2' | translate }}</span></h5>
             <p>
-              Couvrez-vous la bouche et le nez avec un mouchoir en papier lorsque vous toussez ou éternuez ou utilisez l'intérieur de votre coude.
-              Lavez-vous immédiatement les mains à l'eau et au savon pendant au moins 20 secondes ou nettoyez-vous les mains avec un
-              désinfectant pour les mains contenant au moins 60% d'alcool.
+              {{ 'Shared.HowToPrevent.Slide4.3' | translate }}
             </p>
           </div>
           <div *ngIf="modalStep == 5" class="modal-step" [@fadeInOutAnimation]>
             <img src="assets/images/step-5.png" width="125">
-            <h5 class="text-white mt-3">Nettoyez & <span class="text-blue">DESINFECTER</span></h5>
+            <h5 class="text-white mt-3">{{ 'Shared.HowToPrevent.Slide5.1' | translate }} <span class="text-blue">{{ 'Shared.HowToPrevent.Slide5.2' | translate }}</span></h5>
             <p>
-              Nettoyez et désinfectez quotidiennement les surfaces fréquemment touchées. Cela comprend les tables, les poignées de porte, les interrupteurs d'éclairage,
-              comptoirs, poignées, bureaux, téléphones, claviers, toilettes, robinets et éviers.
-              Si les surfaces sont sales, nettoyez-les: Utilisez un détergent ou du savon et de l'eau avant la désinfection.
+              {{ 'Shared.HowToPrevent.Slide5.3' | translate }}
             </p>
           </div>
           <div class="col-12 text-center" *ngIf="modalStep!=5">
-            <button (click)="nextStep()" class="btn btn-secondary waves-effect waves-light mb-4"><span>Next
+            <button (click)="nextStep()" class="btn btn-secondary waves-effect waves-light mb-4"><span>{{ 'Shared.HowToPrevent.buttonNext' | translate }}
               </span><i class="fa fa-arrow-right mr-1"></i></button>
           </div>
           <div class="col-12 text-center" *ngIf="modalStep==5">
             <div class="form-group">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="forDontShow" #dontShow>
-                <label class="custom-control-label" for="forDontShow">Ne plus montrer</label>
+                <label class="custom-control-label" for="forDontShow">{{ 'Shared.HowToPrevent.dontShowText' | translate }}</label>
               </div>
             </div>
-            <button (click)="close(dontShow.checked)" class="btn btn-blue waves-effect waves-light mb-4"><i class="fas fa-times-circle mr-1"></i><span> Fermer</span></button>
+            <button (click)="close(dontShow.checked)" class="btn btn-blue waves-effect waves-light mb-4"><i class="fas fa-times-circle mr-1"></i><span> {{ 'Shared.HowToPrevent.buttonClose' | translate }}</span></button>
           </div>
         </div>
       </div>
@@ -67,7 +57,7 @@
   <div class="row">
     <div class="col-xl-3 col-md-6 col-6">
       <div class="card-box">
-        <h4 class="header-title m-0 text-md-left text-center">Infections</h4>
+        <h4 class="header-title m-0 text-md-left text-center">{{ 'Shared.TopCards.2' | translate }}</h4>
 
         <div class="topBoxes">
           <div class="fa-3x text-center" [class.d-none]="!isLoading">
@@ -78,7 +68,7 @@
             <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2"><i class="mdi mdi-trending-up"></i>
             </span>
             <h2 class="font-weight-normal"> {{totalCases | number}} </h2>
-            <p class="text-muted">{{todayCases}} aujourd'hui</p>
+            <p class="text-muted">{{todayCases}} {{ 'Shared.TopCards.6' | translate }}</p>
           </div>
           <div class="progress progress-bar-alt-blue progress-sm m-0">
             <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -92,7 +82,7 @@
 
     <div class="col-xl-3 col-md-6 col-6">
       <div class="card-box">
-        <h4 class="header-title m-0 text-md-left text-center">Morts</h4>
+        <h4 class="header-title m-0 text-md-left text-center">{{ 'Shared.TopCards.3' | translate }}</h4>
 
         <div class="topBoxes">
           <div class="fa-3x text-center" [class.d-none]="!isLoading">
@@ -103,7 +93,7 @@
               class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
             <h2 class="font-weight-normal"> {{totalDeaths | number}} </h2>
-            <p class="text-muted">{{todayDeaths}} today</p>
+            <p class="text-muted">{{todayDeaths}} {{ 'Shared.TopCards.6' | translate }}</p>
           </div>
           <div class="progress progress-bar-alt-danger progress-sm m-0">
             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -117,7 +107,7 @@
 
     <div class="col-xl-3 col-md-6 col-6">
       <div class="card-box">
-        <h4 class="header-title m-0 text-md-left text-center">Récupérations</h4>
+        <h4 class="header-title m-0 text-md-left text-center">{{ 'Shared.TopCards.4' | translate }}</h4>
 
         <div class="topBoxes">
           <div class="fa-3x text-center" [class.d-none]="!isLoading">
@@ -128,7 +118,7 @@
               class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
             <h2 class="font-weight-normal"> {{totalRecoveries | number}} </h2>
-            <p class="text-muted">{{activeCases | number}} restant</p>
+            <p class="text-muted">{{activeCases | number}} {{ 'Shared.TopCards.8' | translate }}</p>
           </div>
           <div class="progress progress-bar-alt-success progress-sm m-0">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -143,7 +133,7 @@
 
     <div class="col-xl-3 col-md-6 col-6">
       <div class="card-box">
-        <h4 class="header-title m-0 text-md-left text-center">Critique</h4>
+        <h4 class="header-title m-0 text-md-left text-center">{{ 'Shared.TopCards.5' | translate }}</h4>
 
         <div class="topBoxes">
           <div class="fa-3x text-center" [class.d-none]="!isLoading">
@@ -154,7 +144,7 @@
               class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(totalCritical / activeCases * 100) | number:'.1-2'}}%
               <i class="mdi mdi-trending-up"></i> </span>
             <h2 class="font-weight-normal"> {{totalCritical | number}} </h2>
-            <p class="text-muted">{{casesPer1M | number}} par million</p>
+            <p class="text-muted">{{casesPer1M | number}} {{ 'Shared.TopCards.7' | translate }}</p>
           </div>
           <div class="progress progress-bar-alt-warning progress-sm m-0">
             <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0"
@@ -173,23 +163,23 @@
     <div class="col-xl-4">
       <div class="card-box">
         <div class="float-right">
-          <p>Statistiques du jour</p>
+          <p>{{ 'Home.AffectedCountries.2' | translate }}</p>
         </div>
 
-        <h4 class="header-title mb-3">Pays Affectés</h4>
+        <h4 class="header-title mb-3">{{ 'Home.AffectedCountries.1' | translate }} </h4>
         <div class="form-group row">
           <div class="col-md-8 col-8">
             <input type="text" id="example-placeholder" #search (keyup)="searchCountries(search.value)"
-              class="form-control" placeholder="Rechercher {{countries.length}} Pays Affectés">
+              class="form-control" placeholder="{{ 'Home.AffectedCountries.3' | translate }} {{countries.length}} {{ 'Home.AffectedCountries.1' | translate }}">
           </div>
           <div class="col-md-4 col-4">
             <select class="custom-select" #sortBy (change)="sortCountries(sortBy.value,search.value)">
-              <option selected="" disabled>Trier par</option>
-              <option value="cases">Total cas</option>
-              <option value="todayCases">Today cas</option>
-              <option value="deaths">Total Morts</option>
-              <option value="todayDeaths">Total Morts</option>
-              <option value="recovered">Total Guérisons</option>
+              <option selected="" disabled>{{ 'Home.AffectedCountries.4' | translate }}</option>
+              <option value="cases">{{ 'Home.AffectedCountries.5' | translate }}</option>
+              <option value="todayCases">{{ 'Home.AffectedCountries.6' | translate }}</option>
+              <option value="deaths">{{ 'Home.AffectedCountries.7' | translate }}</option>
+              <option value="todayDeaths">{{ 'Home.AffectedCountries.8' | translate }}</option>
+              <option value="recovered">{{ 'Home.AffectedCountries.9' | translate }}</option>
             </select>
           </div>
         </div>
@@ -209,10 +199,10 @@
                   </ng-template>
                 </div>
                 <h5 class="infectedCountryName mt-0 mb-1">{{country.country}}</h5>
-                <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">{{country.cases}}
-                    Cas</span> & <span class="text-danger">{{country.deaths}} Morts</span></p>
-                <p class="infectedCountryCases text-blue">+{{country.todayCases}} Cas</p>
-                <p class="infectedCountryDeaths text-danger">+{{country.todayDeaths}} Morts</p>
+                <p class="infectedCountryDetails font-weight-bold"><span class="text-blue">{{country.cases | number}}
+                  {{ 'Home.AffectedCountries.10' | translate }}</span> & <span class="text-danger">{{country.deaths | number}} {{ 'Home.AffectedCountries.11' | translate }}</span></p>
+                <p class="infectedCountryCases text-blue">+{{country.todayCases | number}} {{ 'Home.AffectedCountries.10' | translate }}</p>
+                <p class="infectedCountryDeaths text-danger">+{{country.todayDeaths | number}} {{ 'Home.AffectedCountries.11' | translate }}</p>
               </a>
             </div>
           </perfect-scrollbar>
@@ -226,34 +216,34 @@
       <div class="card-box">
         <div class="float-md-right float-right d-md-inline d-none">
           <button type="button" class="btn btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('cases');">cas</button>
+            (click)="loadMap('cases');">{{ 'Shared.TopCards.1' | translate }} </button>
           <button type="button" class="btn btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('deaths')">Morts</button>
+            (click)="loadMap('deaths')">{{ 'Shared.TopCards.3' | translate }}</button>
           <button type="button" class="btn btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('recovered')">Guéris</button>
+            (click)="loadMap('recovered')">{{ 'Shared.TopCards.4' | translate }}</button>
           <button type="button" class="btn btn-xs btn-lighten-warning waves-effect waves-light width-xs"
-            (click)="loadMap('critical')">Critique</button>
+            (click)="loadMap('critical')">{{ 'Shared.TopCards.5' | translate }}</button>
         </div>
-        <h4 class="header-title mt-0 mb-3 mt-md-0">Infections Mondiale<button type="button" class="btn btn-xs btn-lighten-secondary waves-effect waves-light width-xs mr-md-1 mr-0"
-          (click)="showModal();">Comment l'empêcher?</button></h4>
+        <h4 class="header-title mt-0 mb-3 mt-md-0">{{ 'Home.WorldMap.1' | translate }} <button type="button" class="btn btn-xs btn-lighten-secondary waves-effect waves-light width-xs mr-md-1 mr-0"
+          (click)="showModal();">{{ 'Home.WorldMap.2' | translate }} </button></h4>
         <div class="fa-3x text-center" [class.d-none]="!isLoadingMap">
           <i class="fas fa-circle-notch fa-spin m-2"></i>
         </div>
         <div class="table-responsive" [class.d-none]="isLoadingMap">
           <div id="worldChart" style="width: 100%; height: 400px; overflow: hidden"></div>
         </div>
-        <div class="float-right d-md-none d-inline">
+        <div class="d-md-none d-inline">
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-blue waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('cases');">cas</button>
+            (click)="loadMap('cases');">{{ 'Shared.TopCards.1' | translate }}</button>
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-danger waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('deaths')">Morts</button>
+            (click)="loadMap('deaths')">{{ 'Shared.TopCards.3' | translate }}</button>
           <button type="button"
             class="btn btn-block btn-xs btn-lighten-success waves-effect waves-light width-xs mr-md-1 mr-0"
-            (click)="loadMap('recovered')">Guéris</button>
+            (click)="loadMap('recovered')">{{ 'Shared.TopCards.4' | translate }}</button>
           <button type="button" class="btn btn-block btn-xs btn-lighten-warning waves-effect waves-light width-xs"
-            (click)="loadMap('critical')">Critique</button>
+            (click)="loadMap('critical')">{{ 'Shared.TopCards.5' | translate }}</button>
         </div>
       </div>
     </div><!-- end col -->
@@ -262,7 +252,7 @@
   <div class="row">
     <div class="col-xl-4">
       <div class="card-box">
-        <h4 class="header-title mb-3">Répartition </h4>
+        <h4 class="header-title mb-3">{{ 'Shared.RateDistribution.1' | translate }} </h4>
         <div class="fa-3x text-center" [class.d-none]="!isLoading">
           <i class="fas fa-circle-notch fa-spin m-2"></i>
         </div>
@@ -280,10 +270,10 @@
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="enableLogarithmicScale" #enableLogarithmicScale (change)="loadLineChart(enableLogarithmicScale.checked)"
             >
-            <label class="custom-control-label" for="enableLogarithmicScale">Activer l'échelle logarithmique</label>
+            <label class="custom-control-label" for="enableLogarithmicScale">{{ 'Shared.InfectionsHistory.2' | translate }}</label>
           </div>
         </div>
-        <h4 class="header-title mt-0 mb-3 mt-md-0">Historique des Infections</h4>
+        <h4 class="header-title mt-0 mb-3 mt-md-0">{{ 'Shared.InfectionsHistory.1' | translate }}</h4>
         <div class="fa-3x text-center" [class.d-none]="!isLoading">
           <i class="fas fa-circle-notch fa-spin m-2"></i>
         </div>
@@ -299,7 +289,7 @@
   <div class="row">
     <div class="col-xl-4">
       <div class="card-box">
-        <h4 class="header-title mb-3">Répartition des infections par pays</h4>
+        <h4 class="header-title mb-3">{{ 'Home.InfectionCountries.1' | translate }}</h4>
         <div class="fa-3x text-center" [class.d-none]="!isLoading">
           <i class="fas fa-circle-notch fa-spin m-2"></i>
         </div>
@@ -314,7 +304,7 @@
     <div class="col-xl-5">
       <div class="card-box">
 
-        <h4 class="header-title mt-0 mb-3">Répartition des infections</h4>
+        <h4 class="header-title mt-0 mb-3">{{ 'Shared.Rates.1' | translate }}</h4>
         <div class="row">
           <div class="col-12">
             <div class="row">
@@ -326,7 +316,7 @@
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-success">
                       {{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%</h2>
-                    <h5>Taux de guérison</h5>
+                    <h5>{{ 'Shared.Rates.2' | translate }}</h5>
                   </div>
                 </div>
               </div>
@@ -339,7 +329,7 @@
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-danger">
                       {{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%</h2>
-                    <h5>Taux de mortalité</h5>
+                    <h5>{{ 'Shared.Rates.3' | translate }}</h5>
                   </div>
                 </div>
               </div>
@@ -352,7 +342,7 @@
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-warning">
                       {{(totalCritical / activeCases * 100) | number:'.1-2'}}%</h2>
-                    <h5>Taux de criticité</h5>
+                    <h5>{{ 'Shared.Rates.4' | translate }}</h5>
                   </div>
                 </div>
               </div>
@@ -365,7 +355,7 @@
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-info" *ngIf="fuse">
                       {{fuse.list.length}}</h2>
-                    <h5>Pays Affectés</h5>
+                    <h5>{{ 'Shared.Other.1' | translate }}</h5>
                   </div>
                 </div>
               </div>
@@ -376,14 +366,16 @@
     </div><!-- end col -->
     <div class="col-xl-3">
       <div class="card-box text-center">
-        <h5>Outbreak Started</h5>
+        <h5>{{ 'Shared.Other.2' | translate }}</h5>
         <app-countup></app-countup>
       </div>
       <div class="card-box text-center">
-        <h5>Partagez avec vos amis, votre famille ou vos collègues.</h5>
-        <p>Tenez-les au courant de l'épidémie de coronavirus.</p>
+
+        <h5>{{ 'Shared.Other.9' | translate }}</h5>
+        <p>{{ 'Shared.Other.10' | translate }}</p>
+
         <a href="https://ko-fi.com/lolo69" class="btn btn- waves-effect btn-danger d-block mt-1 mx-auto"> <i
-            class="fas fa-coffee"></i> Achetez moi un café </a>
+            class="fas fa-coffee"></i> {{ 'Shared.Other.8' | translate }} </a>
       </div>
     </div><!-- end col -->
 

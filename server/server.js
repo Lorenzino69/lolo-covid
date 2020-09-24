@@ -51,136 +51,85 @@ var getAll = async () => {
   redis.set(keys.all, string);
   console.log("Updated The Cases");
 }
-var getCountries = async () => {
-  let response;
-  try {
-    response = await axios.get("https://www.worldometers.info/coronavirus/");
-    if (response.status !== 200) {
-      console.log("Error", response.status);
-    }
-  } catch (err) {
-    return null;
-  }
-  // to store parsed data
-  const result = [];
-  // get HTML and parse death rates
-  const html = cheerio.load(response.data);
-  const countriesTable = html("table#main_table_countries_today");
-  const countriesTableCells = countriesTable
-    .children("tbody")
-    .children("tr")
-    .children("td");
-  // NOTE: this will change when table format change in website
-  const totalColumns = 12;
-  const countryColIndex = 0;
-  const casesColIndex = 1;
-  const todayCasesColIndex = 2;
-  const deathsColIndex = 3;
-  const todayDeathsColIndex = 4;
-  const curedColIndex = 5;
-  const activeColIndex = 6;
-  const criticalColIndex = 7;
-  const casesPerOneMillionColIndex = 8;
-  const deathsPerOneMillionColIndex = 9;
-  // minus totalColumns to skip last row, which is total
-  for (let i = 0; i < countriesTableCells.length - totalColumns; i += 1) {
-    const cell = countriesTableCells[i];
-
-    // get country
-    if (i % totalColumns === countryColIndex) {
-      let country =
-        cell.children[0].data ||
-        cell.children[0].children[0].data ||
-        // country name with link has another level
-        cell.children[0].children[0].children[0].data ||
-        cell.children[0].children[0].children[0].children[0].data ||
-        "";
-      country = country.trim();
-      if (country.length === 0) {
-        // parse with hyperlink
-        country = cell.children[0].next.children[0].data || "";
-      }
-      result.push({
-        country
-      });
-    }
-    // get cases
-    if (i % totalColumns === casesColIndex) {
-      let cases = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].cases = parseInt(
-        cases.trim().replace(/,/g, "") || "0",
-        10
-      );
-    }
-    // get today cases
-    if (i % totalColumns === todayCasesColIndex) {
-      let cases = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].todayCases = parseInt(
-        cases.trim().replace(/,/g, "") || "0",
-        10
-      );
-    }
-    // get deaths
-    if (i % totalColumns === deathsColIndex) {
-      let deaths = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].deaths = parseInt(
-        deaths.trim().replace(/,/g, "") || "0",
-        10
-      );
-    }
-    // get today deaths
-    if (i % totalColumns === todayDeathsColIndex) {
-      let deaths = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].todayDeaths = parseInt(
-        deaths.trim().replace(/,/g, "") || "0",
-        10
-      );
-    }
-    // get cured
-    if (i % totalColumns === curedColIndex) {
-      let cured = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].recovered = parseInt(
-        cured.trim().replace(/,/g, "") || 0,
-        10
-      );
-    }
-    // get active
-    if (i % totalColumns === activeColIndex) {
-      let cured = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].active = parseInt(
-        cured.trim().replace(/,/g, "") || 0,
-        10
-      );
-    }
-    // get critical
-    if (i % totalColumns === criticalColIndex) {
-      let critical = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].critical = parseInt(
-        critical.trim().replace(/,/g, "") || "0",
-        10
-      );
-    }
-    // get total cases per one million population
-    if (i % totalColumns === casesPerOneMillionColIndex) {
-      let casesPerOneMillion = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].casesPerOneMillion = parseFloat(
-        casesPerOneMillion.trim().replace(/,/g, "") || "0"
-      );
-    }
-
-    // get total deaths per one million population
-    if (i % totalColumns === deathsPerOneMillionColIndex) {
-      let deathsPerOneMillion = cell.children.length != 0 ? cell.children[0].data : "";
-      result[result.length - 1].deathsPerOneMillion = parseFloat(
-        deathsPerOneMillion.trim().replace(/,/g, "") || "0"
-      );
-    }
-  }
-
-  const string = JSON.stringify(result.filter(x=>x.country!="World"));
-  redis.set(keys.countries, string);
-  console.log(`Updated countries: ${result.length} countries`);
+function fillResult(html, idExtension) {
+	const countriesTable = html(`table#main_table_countries_${idExtension}`);
+	const countries = countriesTable.children('tbody:first-of-type').children('tr:not(.row_continent)').map(mapRows).get();
+	const continents = countriesTable.children('tbody:first-of-type').children('tr.row_continent').map(mapRows).get().map(el => continentMapping(el, countries)).filter(data => !!data.continent);
+	const world = countries.shift();
+	world.population = countries.map(country => country.population).reduce((sum, pop) => sum + pop);
+	world.tests = countries.map(country => country.tests).reduce((sum, test) => sum + test);
+	world.testsPerOneMillion = toPerOneMillion(world.population, world.tests);
+	world.activePerOneMillion = toPerOneMillion(world.population, world.active);
+	world.recoveredPerOneMillion = toPerOneMillion(world.population, world.recovered);
+	world.criticalPerOneMillion = toPerOneMillion(world.population, world.critical);
+	return { world, countries, continents };
+}
+const getCountries = async () => {
+	try {
+		const html = cheerio.load((await axios.get('https://www.worldometers.info/coronavirus')).data);
+		['today', 'yesterday', 'yesterday2'].forEach(key => {
+      const data = fillResult(html, key);
+      let countries = [data.world, ...getOrderByCountryName(data.countries)].filter(country => country.country!="World");
+      console.log(countries)
+			redis.set(keys[`${key === 'today' ? '' : key === 'yesterday2' ? 'twoDaysAgo_' : 'yesterday_'}countries`], JSON.stringify(countries));
+			console.info(`Updated ${key} countries statistics: ${data.countries.length + 1}`);
+			redis.set(keys[`${key === 'today' ? '' : key === 'yesterday2' ? 'twoDaysAgo_' : 'yesterday_'}continents`], JSON.stringify(getOrderByCountryName(data.continents)));
+			console.info(`Updated ${key} continents statistics: ${data.continents.length}`);
+		});
+	} catch (err) {
+		console.log('Error: Requesting WorldoMeters failed!', err);
+	}
 };
+const columns = ['index', 'country', 'cases', 'todayCases', 'deaths', 'todayDeaths', 'recovered', 'todayRecovered', 'active',
+	'critical', 'casesPerOneMillion', 'deathsPerOneMillion', 'tests', 'testsPerOneMillion', 'population', 'continent', 'oneCasePerPeople', 'oneDeathPerPeople', 'oneTestPerPeople'];
+const mapRows = (_, row) => {
+	const entry = { updated: Date.now() };
+	const replaceRegex = /(\n|,)/g;
+	cheerio(row).children('td').each((index, cell) => {
+		const selector = columns[index];
+		cell = cheerio.load(cell);
+		switch (index) {
+			case 0: {
+				break;
+			}
+			case 1: {
+				const countryInfo = {};
+				entry[selector] = countryInfo.country || cell.text().replace(replaceRegex, '');
+				delete countryInfo.country;
+				entry.countryInfo = countryInfo;
+				break;
+			}
+			case 15: {
+				entry[selector] = cell.text();
+				break;
+			}
+			default:
+				entry[selector] = parseFloat(cell.text().replace(replaceRegex, '')) || null;
+		}
+	});
+	// eslint-disable-next-line no-unused-expressions
+	!entry.active && (entry.active = entry.cases - entry.recovered - entry.deaths);
+	entry.activePerOneMillion = toPerOneMillion(entry.population, entry.active);
+	entry.recoveredPerOneMillion = toPerOneMillion(entry.population, entry.recovered);
+	entry.criticalPerOneMillion = toPerOneMillion(entry.population, entry.critical);
+	return entry;
+};
+const toPerOneMillion = (population, property) => property && parseFloat((1e6 / population * property).toFixed(2));
+const continentMapping = (element, countries) => {
+	const continentCountries = countries.filter(country => country.continent === element.continent);
+	element.population = continentCountries.map(country => country.population).reduce((sum, pop) => sum + pop);
+	element.tests = continentCountries.map(country => country.tests).reduce((sum, tests) => sum + tests);
+	element.casesPerOneMillion = toPerOneMillion(element.population, element.cases);
+	element.deathsPerOneMillion = toPerOneMillion(element.population, element.deaths);
+	element.testsPerOneMillion = toPerOneMillion(element.population, element.tests);
+	element.activePerOneMillion = toPerOneMillion(element.population, element.active);
+	element.recoveredPerOneMillion = toPerOneMillion(element.population, element.recovered);
+	element.criticalPerOneMillion = toPerOneMillion(element.population, element.critical);
+	// eslint-disable-next-line no-unused-vars
+	const { country, countryInfo, oneCasePerPeople, oneDeathPerPeople, oneTestPerPeople, ...continentData } = element;
+	return continentData;
+};
+const getOrderByCountryName = (data) => data.sort((a, b) => a.country < b.country ? -1 : 1);
 
 var getHistory = async () => {
   let history = await axios.get(`https://pomber.github.io/covid19/timeseries.json`).then(async response => {

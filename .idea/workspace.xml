@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d33331b2-7ac3-4140-8343-845afed74607" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Covid-19-Statistics-Dashboard-Angular-9.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Corona-Statistics-And-Tracker-Dashboard-Angular-9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/scss/custom/structure/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/scss/custom/structure/_general.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es2015.fe84d420629c78e642b1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es5.fe84d420629c78e642b1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ngsw.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ngsw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/styles.f749fd2e379b84750c2a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config.example.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/services/getdata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/getdata.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/country/country.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/country/country.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/country/country.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/country/country.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/not-found/not-found.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/not-found/not-found.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/countup/countup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/countup/countup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/LOLO_Covid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/custom/plugins/_waves.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/custom/plugins/_waves.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/custom/structure/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/custom/structure/_general.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hyggHeMgdNsqlXCHgezj7nCbb1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="AutoIdentifyTypo3Version" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TYPO3AuthorEmailAddress" value="myname@example.org" />
+    <property name="TYPO3AuthorName" value="My Name" />
+    <property name="TYPO3PathToExtensionDomainModels" value="Classes/Domain/Model/" />
+    <property name="TYPO3PathToLocalExtensions" value="typo3conf/ext/" />
+    <property name="TYPO3PathToSystemExtensions" value="typo3/sysext/" />
+    <property name="TYPO3ProjectConfigured" value="true" />
+    <property name="TYPO3Version" value="None" />
+    <property name="TYPO3XliffLanguages" value="af:Afrikaans;&#10;ar:Arabic;&#10;bs:Bosnian;&#10;bg:Bulgarian;&#10;ca:Catalan;&#10;ch:Chinese (Simpl.);&#10;cs:Czech;&#10;da:Danish;&#10;de:German;&#10;el:Greek;&#10;eo:Esperanto;&#10;es:Spanish;&#10;et:Estonian;&#10;eu:Basque;&#10;fa:Persian;&#10;fi:Finnish;&#10;fo:Faroese;&#10;fr:French;&#10;fr_CA:French (Canada);&#10;gl:Galician;&#10;he:Hebrew;&#10;hi:Hindi;&#10;hr:Croatian;&#10;hu:Hungarian;&#10;is:Icelandic;&#10;it:Italian;&#10;ja:Japanese;&#10;ka:Georgian;&#10;kl:Greenlandic;&#10;km:Khmer;&#10;ko:Korean;&#10;lt:Lithuanian;&#10;lv:Latvian;&#10;ms:Malay;&#10;nl:Dutch;&#10;no:Norwegian;&#10;pl:Polish;&#10;pt:Portuguese;&#10;pt_BR:Brazilian Portuguese;&#10;ro:Romanian;&#10;ru:Russian;&#10;sk:Slovak;&#10;sl:Slovenian;&#10;sq:Albanian;&#10;sr:Serbian;&#10;sv:Swedish;&#10;th:Thai;&#10;tr:Turkish;&#10;uk:Ukrainian;&#10;vi:Vietnamese;&#10;zh:Chinese (Trad.)" />
+    <property name="TYPO3XliffPathToExtensionLanguageFiles" value="Resources/Private/Language/" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\SITE_WEB\Covid-19-Statistics-Dashboard-Angular-9\node_modules\typescript\lib" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Angular Application">
+    <configuration name="E2E Tests (angular-e2e)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d33331b2-7ac3-4140-8343-845afed74607" name="Default Changelist" comment="" />
+      <created>1600988855807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600988855807</updated>
+      <workItem from="1600988865768" duration="982000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="828" y="431" key="#TSLint" timestamp="1600989417124">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="828" y="431" key="#TSLint/0.0.1920.1040@0.0.1920.1040" timestamp="1600989417124" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1600989257576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600989257576" />
+  </component>
+</project>

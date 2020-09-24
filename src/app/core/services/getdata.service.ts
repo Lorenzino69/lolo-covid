@@ -53,7 +53,7 @@ export class GetdataService {
       // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    window.alert("Problème de connexion!.");
+    window.alert("Please check your internet connection!.");
     return throwError(errorMessage);
  }
 }
