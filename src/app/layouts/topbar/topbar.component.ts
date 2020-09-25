@@ -5,10 +5,11 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent {
-  constructor() { }
+  constructor() {}
 
   deferredPrompt: any;
   showButton = false;
+
   @HostListener('window:beforeinstallprompt', ['$event'])
   onbeforeinstallprompt(e) {
     console.log(e);

@@ -1,0 +1,50 @@
+.articleImage{
+  display:flex;
+  /*object-fit: cover;*/
+  justify-content: center;
+  align-items: center;
+
+}
+.mat-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+  width:auto;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-display-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+
+  margin-bottom: 0px;
+
+}
+.typecard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+  width:800px;
+  background-color:#232831;
+}
+.mat-card{
+  background-color:#232831 !important;
+}
+.mat-card-content{
+  color:white !important;
+}
+.mat-card-header{
+  color:white !important;
+}

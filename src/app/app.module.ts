@@ -23,6 +23,9 @@ import { environment } from '../environments/environment';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CountupComponent } from './shared/countup/countup.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ActuComponent } from './pages/actu/actu.component';
+import {ActuService} from './shared/actu.service';
+import {MatCardModule} from '@angular/material/card';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   };
@@ -35,30 +38,31 @@ export function HttpLoaderFactory(http: HttpClient){
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,TopbarComponent, NavbarComponent, FooterComponent, DashboardComponent, CountryComponent, NotFoundComponent, CountupComponent
+    LayoutComponent,TopbarComponent, NavbarComponent, FooterComponent,
+    DashboardComponent, CountryComponent, NotFoundComponent, CountupComponent, ActuComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule,CommonModule,
+    AppRoutingModule, CommonModule,
     RouterModule,
     PerfectScrollbarModule,
     ModalModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' }),
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production, registrationStrategy: 'registerImmediately'}),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory:HttpLoaderFactory,
+        useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }), MatCardModule
 
   ],
   providers:[{
     provide: PERFECT_SCROLLBAR_CONFIG,
     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-  }],
+  },ActuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

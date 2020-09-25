@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h1 class="mat-display-1">Actualités</h1>
+
+    <div  class="cards">
+        <div  class="typecard">
+            <mat-card *ngFor="let data of data" style="margin-top:10px;">
+                <mat-card-header *ngIf="data">
+                    <mat-card-title>{{data.title}}</mat-card-title>
+                    <mat-card-subtitle>{{data.published_date | date}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <a href="{{data.link}}" target="_blank">
+                    <img mat-card-image class="articleImage"
+                         src="{{data.media}}" alt="">
+                </a>
+                    <!--                 src="{{data.image.url.replace('-{width}-{height}-{quality}/','-320-213-75/')}}"-->
+
+                    <mat-card-content>
+                        <p>
+                            {{data.summary}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                    </mat-card-actions>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
