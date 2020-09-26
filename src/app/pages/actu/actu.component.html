@@ -1,9 +1,9 @@
 <div class="container-fluid">
-    <h1 class="mat-display-1">Actualités</h1>
+    <mat-card><h1 class="mat-display-1">Actualités</h1></mat-card>
 
     <div  class="cards">
         <div  class="typecard">
-            <mat-card *ngFor="let data of data" style="margin-top:10px;">
+            <mat-card *ngFor="let data of data">
                 <mat-card-header *ngIf="data">
                     <mat-card-title>{{data.title}}</mat-card-title>
                     <mat-card-subtitle>{{data.published_date | date}}
