@@ -17,6 +17,7 @@ export class ActuComponent implements OnInit {
         .subscribe(
             res => {
               this.data= res.articles;
+              console.log(this.data)
 
             }, () => {
               console.log("erreur d'appel a league service");
