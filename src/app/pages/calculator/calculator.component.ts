@@ -95,10 +95,6 @@ export class CalculatorComponent implements OnInit {
 
 
     this.cache = this.risk;
-    console.log(this.cache)
-
-    console.log(this.sexe,this.cardioValue,this.diabeteValue,this.respirationValue,this.hypertensionValue,this.cancerValue)
-
     // this.risk += ((this.cache * this.sexe) - this.cache);
     if(this.cardioValue > 0) this.risk += ((this.cache * this.cardioValue) - this.cache);
     if(this.diabeteValue > 0) this.risk += ((this.cache * this.diabeteValue) - this.cache);
@@ -124,8 +120,6 @@ export class CalculatorComponent implements OnInit {
       color: 'rgba(243, 83, 83)',
       background: 'rgba(243, 83, 83, 0.14)',
     }
-
-console.log(this.risk)
 
     const dialogRef =this.dialog.open(DialogCalculatorComponent, {
       width: '250px',

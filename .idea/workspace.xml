@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33331b2-7ac3-4140-8343-845afed74607" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600988855807</updated>
       <workItem from="1600988865768" duration="3649000" />
-      <workItem from="1601154198891" duration="12842000" />
+      <workItem from="1601154198891" duration="13161000" />
     </task>
     <servers />
   </component>
