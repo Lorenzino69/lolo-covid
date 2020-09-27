@@ -1,31 +1,39 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
-import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LayoutComponent } from './layouts/layout.component';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {LayoutComponent} from './layouts/layout.component';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
 
-import { PerfectScrollbarModule, PerfectScrollbarConfigInterface,PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { TopbarComponent } from './layouts/topbar/topbar.component';
-import { NavbarComponent } from './layouts/navbar/navbar.component';
-import { FooterComponent } from './layouts/footer/footer.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { CountryComponent } from './pages/country/country.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { CountupComponent } from './shared/countup/countup.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { ActuComponent } from './pages/actu/actu.component';
+import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
+import {TopbarComponent} from './layouts/topbar/topbar.component';
+import {NavbarComponent} from './layouts/navbar/navbar.component';
+import {FooterComponent} from './layouts/footer/footer.component';
+import {DashboardComponent} from './pages/dashboard/dashboard.component';
+import {CountryComponent} from './pages/country/country.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
+import {CountupComponent} from './shared/countup/countup.component';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import {ActuComponent} from './pages/actu/actu.component';
 import {ActuService} from './shared/actu.service';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {CalculatorComponent} from './pages/calculator/calculator.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogCalculatorComponent } from './pages/dialog-calculator/dialog-calculator.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   };
@@ -39,7 +47,7 @@ export function HttpLoaderFactory(http: HttpClient){
   declarations: [
     AppComponent,
     LayoutComponent,TopbarComponent, NavbarComponent, FooterComponent,
-    DashboardComponent, CountryComponent, NotFoundComponent, CountupComponent, ActuComponent
+    DashboardComponent, CountryComponent, NotFoundComponent, CountupComponent, ActuComponent, CalculatorComponent, DialogCalculatorComponent
   ],
   imports: [
     BrowserModule,
@@ -56,8 +64,11 @@ export function HttpLoaderFactory(http: HttpClient){
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    }), MatCardModule
+    }), MatCardModule, MatButtonToggleModule, MatRadioModule,
+    MatButtonModule, MatCheckboxModule, FormsModule, ReactiveFormsModule,MatDialogModule
 
+  ],entryComponents: [
+    DialogCalculatorComponent
   ],
   providers:[{
     provide: PERFECT_SCROLLBAR_CONFIG,

@@ -1,281 +1,23 @@
-
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-54176113-3"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'UA-54176113-3');
-    </script>
-
-    <title>Coronavirus Dashboard</title>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="description"
-          content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures.">
-    <meta name="keywords"
-          content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ncov2019.live/">
-    <meta property="og:title" content="Coronavirus Dashboard">
-    <meta property="og:description"
-          content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures.">
-    <meta property="og:image" content="https://ncov2019.live/images/thumbnailcorona.jpg">
-
-    <meta name="twitter:title" content="ncov2019.live - Coronavirus Tracker">
-    <meta name="twitter:description"
-          content="Live coronavirus dashboard. See data, maps, social media trends, and learn about prevention measures.">
-    <meta name="twitter:image" content="https://ncov2019.live/images/thumbnailcorona.jpg">
-    <meta name="twitter:creator" content="@thedanielconlon">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="images\apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images\favicon-16x16.png">
-    <link rel="manifest" href="images\site.webmanifest">
-
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.myrcon.net/fontawesome-pro-5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="calculator.component.css" rel="stylesheet">
-
-    <style>
-        body {
-            background-color: #364061;
-        }
-
-        .row {
-            margin-bottom: 25px;
-        }
-    </style>
-</head>
-
-<body>
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-    <style type="text/css" media="screen">
-        .btn-group-xs > .btn, .btn-xs {
-            padding: .35rem .4rem .25rem .4rem;
-            font-size: .875rem;
-            line-height: .5;
-            border-radius: .2rem
-        }
-
-        .checkbox label .toggle, .checkbox-inline .toggle {
-            margin-left: -1.25rem;
-            margin-right: .35rem
-        }
-
-        .toggle {
-            position: relative;
-            overflow: hidden
-        }
-
-        .toggle.btn.btn-light, .toggle.btn.btn-outline-light {
-            border-color: rgba(0, 0, 0, .15)
-        }
-
-        .toggle input[type=checkbox] {
-            display: none
-        }
-
-        .toggle-group {
-            position: absolute;
-            width: 200%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            -moz-user-select: none;
-            -webkit-user-select: none
-        }
-
-        .toggle-group label, .toggle-group span {
-            cursor: pointer
-        }
-
-        .toggle .toggle-group {
-            left: -100%
-        }
-
-        .toggle-on {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 50%;
-            margin: 0;
-            border: 0;
-            border-radius: 0
-        }
-
-        .toggle-off {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            right: 0;
-            margin: 0;
-            border: 0;
-            border-radius: 0;
-            box-shadow: none
-        }
-
-        .toggle-handle {
-            position: relative;
-            margin: 0 auto;
-            padding-top: 0;
-            padding-bottom: 0;
-            height: 100%;
-            width: 0;
-            border-width: 0 1px;
-            background-color: #fff
-        }
-
-        .toggle.btn-outline-primary .toggle-handle {
-            background-color: var(--primary);
-            border-color: var(--primary)
-        }
-
-        .toggle.btn-outline-secondary .toggle-handle {
-            background-color: var(--secondary);
-            border-color: var(--secondary)
-        }
-
-        .toggle.btn-outline-success .toggle-handle {
-            background-color: var(--success);
-            border-color: var(--success)
-        }
-
-        .toggle.btn-outline-danger .toggle-handle {
-            background-color: var(--danger);
-            border-color: var(--danger)
-        }
-
-        .toggle.btn-outline-warning .toggle-handle {
-            background-color: var(--warning);
-            border-color: var(--warning)
-        }
-
-        .toggle.btn-outline-info .toggle-handle {
-            background-color: var(--info);
-            border-color: var(--info)
-        }
-
-        .toggle.btn-outline-light .toggle-handle {
-            background-color: var(--light);
-            border-color: var(--light)
-        }
-
-        .toggle.btn-outline-dark .toggle-handle {
-            background-color: var(--dark);
-            border-color: var(--dark)
-        }
-
-        .toggle[class*=btn-outline]:hover .toggle-handle {
-            background-color: var(--light);
-            opacity: .5
-        }
-
-        .toggle.btn {
-            min-width: 3.7rem;
-            min-height: 2.15rem
-        }
-
-        .toggle-on.btn {
-            padding-right: 1.5rem
-        }
-
-        .toggle-off.btn {
-            padding-left: 1.5rem
-        }
-
-        .toggle.btn-lg {
-            min-width: 5rem;
-            min-height: 2.815rem
-        }
-
-        .toggle-on.btn-lg {
-            padding-right: 2rem
-        }
-
-        .toggle-off.btn-lg {
-            padding-left: 2rem
-        }
-
-        .toggle-handle.btn-lg {
-            width: 2.5rem
-        }
-
-        .toggle.btn-sm {
-            min-width: 3.125rem;
-            min-height: 1.938rem
-        }
-
-        .toggle-on.btn-sm {
-            padding-right: 1rem
-        }
-
-        .toggle-off.btn-sm {
-            padding-left: 1rem
-        }
-
-        .toggle.btn-xs {
-            min-width: 2.19rem;
-            min-height: 1.375rem
-        }
-
-        .toggle-on.btn-xs {
-            padding-right: .8rem
-        }
-
-        .toggle-off.btn-xs {
-            padding-left: .8rem
-        }
-    </style>
-</head>
-
-<body>
-
-<div id="ruby" class="shapes-background" style="display:none;">
-    <div class="shapes">
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-        <div class="shape"><img src="https://i.imgur.com/D6zLRrh.png" width="100px"></div>
-    </div>
-</div>
-
-<div class="container-fluid content">
-    <div class="col" style="background-color: #445175; width: inherit; border-radius: 25px;">
-        <h1 style="color: white; font-size: 45px; text-align: center; padding-top: 15px; font-weight: bolder;">
+<!--<div class="container-fluid">-->
+<!--<mat-button-toggle-group name="fontStyle" aria-label="Font Style">-->
+<!--    <mat-button-toggle value="bold">Bold</mat-button-toggle>-->
+<!--    <mat-button-toggle value="italic">Italic</mat-button-toggle>-->
+<!--    <mat-button-toggle value="underline">Underline</mat-button-toggle>-->
+<!--</mat-button-toggle-group>-->
+<!--</div>-->
+<div class="container-fluid">
+    <div style="background-color: #445175; width: inherit; border-radius: 25px;">
+        <h1 style="color: white; font-size: 45px; text-align: center; padding-top: 30px; font-weight: bolder;">
             <i class="fad fa-lungs-virus"></i>
-            <span class="title">Survival Rate Calculator</span>
+            <span class="title">Calculateur</span>
         </h1>
         <div class="container" style=" margin-bottom: 20px; ">
 
             <div id="calculator" class="bg-navy-5 mb-4 pos-rel"
-                 style="min-height:400px;max-width: 700px;margin: auto;margin-top: 50px;border-radius: 20px;padding:20px">
-                <form id="health-check" class="m-0">
+                 style="min-height:400px;max-width: 700px;margin: auto;margin-top: 50px;border-radius: 20px;">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="m-0">
                     <div id="result" class="text-center mb-4 rounded-10"
-                         style="display:none; background: rgba(14, 233, 203, 0.14); padding: 20px; color: rgba(14, 233, 203, 1); ">
+                         style="display:none; background: rgba(14, 233, 203, 0.14); color: rgba(14, 233, 203, 1); ">
                         <h3 class="title font-weight-bold"></h3>
                         <span class="message">You have an estimated <b><span class="risk">0</span>%</b> chance of <b>dying</b> from covid-19 if infected</span>
                         <br>
@@ -284,94 +26,104 @@
                     </div>
                     <!-- <h3 class="font-weight-bold mb-4">ncov2019 Health Checker | Are you at risk?</h3> -->
 
-                    <div class="col nopad mb-4">
-                        <h5 class="font-weight-bold mb-3">Age group</h5>
-                        <div class="row px-2 row-cols-md-5 row-cols-sm-2 row-cols-1 nopad text-center age-groups select-list"
-                             type="age">
-                            <div class="col px-2 mb-3">
-                                <div class="col item pt-3 pb-3 rounded-10" value=".2">
-                                    <span class="font-weight-bold">1 - 19</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3">
-                                <div class="col item pt-3 pb-3 rounded-10" value=".3">
-                                    <span class="font-weight-bold">20 - 39</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3">
-                                <div class="col item pt-3 pb-3 rounded-10" value="2.5">
-                                    <span class="font-weight-bold">40 - 59</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3">
-                                <div class="col item pt-3 pb-3 rounded-10" value="5">
-                                    <span class="font-weight-bold">60 - 79</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3">
-                                <div class="col item pt-3 pb-3 rounded-10" value="14.8">
-                                    <span class="font-weight-bold">80 - 100+</span>
-                                </div>
-                            </div>
+
+                    <div class="col nopad mb-3">
+                        <h5 class="font-weight-bold mb-3">Age</h5>
+                        <div class="age">
+                            <mat-button-toggle-group formControlName= "age" name="fontStyle" aria-label="Font Style">
+                                <mat-button-toggle  value=".2"><span class="font-weight-bold">1-19</span>
+                                </mat-button-toggle>
+                                <mat-button-toggle  value=".3"><span class="font-weight-bold">20-39</span>
+                                </mat-button-toggle>
+                                <mat-button-toggle value="2.5"><span class="font-weight-bold">40-59</span>
+                                </mat-button-toggle>
+                                <mat-button-toggle  value="5"><span class="font-weight-bold">60-79</span>
+                                </mat-button-toggle>
+                                <mat-button-toggle  value="14.8"><span class="font-weight-bold">80-100+</span>
+                                </mat-button-toggle>
+                            </mat-button-toggle-group>
                         </div>
                     </div>
                     <div class="col nopad mb-4">
-                        <h5 class="font-weight-bold mb-3">Sex</h5>
-                        <div class="row px-2 row-cols-sm-2 row-cols-1 nopad text-center gender select-list"
-                             type="gender">
-                            <div class="col px-2 mb-3">
-                                <div class="col item pt-3 pb-3 rounded-10" value=".15">
-                                    <span class="font-weight-bold">Male</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3">
-                                <div class="col item pt-3 pb-3 rounded-10" value=".035">
-                                    <span class="font-weight-bold">Female</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3" cheat="dcon" style="display:none;">
-                                <div class="col item pt-3 pb-3 rounded-10" value="1">
-                                    <span class="font-weight-bold">DCON</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3" cheat="avi" style="display:none;">
-                                <div class="col item pt-3 pb-3 rounded-10" value="1">
-                                    <span class="font-weight-bold">Avi</span>
-                                </div>
-                            </div>
-                            <div class="col px-2 mb-3" cheat="elle" style="display:none;">
-                                <div class="col item pt-3 pb-3 rounded-10" value="1">
-                                    <span class="font-weight-bold">Weeb</span>
-                                </div>
-                            </div>
+                        <h5 class="font-weight-bold mb-3">Sexe</h5>
+                        <div class="text-center" type="gender">
+                            <mat-button-toggle-group formControlName= "sexe" name="fontStyle" aria-label="Font Style" ngDefaultControl>
+                                <mat-button-toggle value=".15"><span class="font-weight-bold">Homme</span>
+                                </mat-button-toggle>
+                                <mat-button-toggle  value=".035"><span class="font-weight-bold">Femme</span>
+                                </mat-button-toggle>
+                            </mat-button-toggle-group>
+
+
+
+
+<!--                            <div class="col px-2 mb-3" cheat="dcon" style="display:none;">-->
+<!--                                <div class="col item pt-3 pb-3 rounded-10" value="DCON">-->
+<!--                                    <span class="font-weight-bold">DCON</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col px-2 mb-3" cheat="avi" style="display:none;">-->
+<!--                                <div class="col item pt-3 pb-3 rounded-10" value="AVI">-->
+<!--                                    <span class="font-weight-bold">Avi</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col px-2 mb-3" cheat="elle" style="display:none;">-->
+<!--                                <div class="col item pt-3 pb-3 rounded-10" value="WEEB">-->
+<!--                                    <span class="font-weight-bold">Weeb</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                     </div>
                     <div class="col nopad mb-4">
-                        <h5 class="font-weight-bold mb-3">Do you have any of these conditions?</h5>
-                        <div class="form-group mb-3">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="10.5">
-                            <label class="ml-2">Cardiovascular disease</label>
+                        <h5 class="font-weight-bold mb-3">Avez vous une de ces maladies?</h5>
+                        <div class="form-group mb-2">
+<!--                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"-->
+<!--                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="10.5">-->
+<!--                            <label class="ml-2">Cardiovascular disease</label>-->
+                            <label class="example-margin">Vasculaire:&nbsp;&nbsp;</label>
+                            <mat-radio-group [(ngModel)]="cardio" formControlName="cardio" class="maladies">
+                                <mat-radio-button class="example-margin" value="10.5">Oui</mat-radio-button>
+                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
+
+                            </mat-radio-group>
                         </div>
                         <div class="form-group mb-3">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="7.3">
-                            <label class="ml-2">Diabetes</label>
+                            <label class="example-margin">Diabète:&nbsp;&nbsp;</label>
+                            <mat-radio-group [(ngModel)]="diabete" formControlName="diabete">
+                                <mat-radio-button class="example-margin" value="7.3">Oui</mat-radio-button>
+                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
+
+                            </mat-radio-group>
                         </div>
                         <div class="form-group mb-3">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="6.3">
-                            <label class="ml-2">Chronic respiratory disease</label>
+                            <label class="example-margin">Respiratoire:</label>
+                            <mat-radio-group [(ngModel)]="respiration" formControlName="respiration">
+                                <mat-radio-button class="example-margin" value="6.3">Oui</mat-radio-button>
+                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
+
+                            </mat-radio-group>
                         </div>
                         <div class="form-group mb-3">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="6">
-                            <label class="ml-2">Hypertension</label>
+<!--                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"-->
+<!--                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="6">-->
+<!--                            <label class="ml-2">Hypertension</label>-->
+                            <label class="example-margin">Hypertension:&nbsp;&nbsp;</label>
+                            <mat-radio-group [(ngModel)]="hypertension" formControlName="hypertension">
+                                <mat-radio-button class="example-margin" value="6">Oui</mat-radio-button>
+                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
+
+                            </mat-radio-group>
                         </div>
                         <div class="form-group mb-3">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="5.6">
-                            <label class="ml-2">Cancer</label>
+<!--                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"-->
+<!--                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="5.6">-->
+<!--                            <label class="ml-2">Cancer</label>-->
+                            <label class="example-margin">Cancer:&nbsp;&nbsp;</label>
+                            <mat-radio-group [(ngModel)]="cancer" formControlName="cancer">
+                                <mat-radio-button class="example-margin" value="5.6">Oui</mat-radio-button>
+                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
+
+                            </mat-radio-group>
                         </div>
                         <div class="form-group mb-3" cheat="dcon" style="display:none;">
                             <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
@@ -391,9 +143,10 @@
                     </div>
 
                     <div class="col nopad mt-4">
-                        <button type="submit" class="btn p-2 btn-primary btn-block rounded-10">Check <span
-                                style=" width: 0px; display: inline-block; "><i
-                                class="fad fa-spinner-third fa-spin loader" style="display:none;"></i></span></button>
+<!--                        <button type="submit" class="btn p-2 btn-primary btn-block rounded-10">Check <span-->
+<!--                                style=" width: 0px; display: inline-block; "><i-->
+<!--                                class="fad fa-spinner-third fa-spin loader" style="display:none;"></i></span></button>-->
+                        <button class="btn btn-primary mr-1">Tester</button>
                     </div>
                 </form>
             </div>
@@ -408,177 +161,5 @@
 
         </div>
     </div>
+
 </div>
-
-</body>
-
-<script src="js\jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/r-2.2.3/datatables.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
-<script src="js\ncov.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
-<script>
-    // cheats
-    var result_safty = 1;
-    var loading_time = 1000;
-    var form = $('#health-check');
-
-    (function () {
-        var str = '';
-
-        $('body').off('keypress.cheats').on('keypress.cheats', function (e) {
-            var key = e.key;
-            str += key;
-            str = str.substring(str.length - 10);
-
-            if (str.substring(str.length - 4) == 'dcon') {
-                $('[cheat=dcon]').show();
-                result_safty = 0;
-
-                return;
-            }
-            if (str.substring(str.length - 3) == 'avi') {
-                $('[cheat=avi]').show();
-                $('#calculator').css({
-                    backgroundImage: 'url(https://i.imgur.com/gO9qhUk.png)',
-                    backgroundSize: 'cover',
-                });
-                $('.fa-lungs-virus').removeClass('fa-lungs-virus').addClass('fa-cat');
-                result_safty = 0;
-
-                return;
-            }
-            if (str.substring(str.length - 4) == 'elle') {
-                $('[cheat=elle]').show();
-                result_safty = 0;
-
-                return;
-            }
-            if (str.substring(str.length - 7) == 'extreme') {
-                window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-                result_safty = 0;
-
-                return;
-            }
-            if (str.substring(str.length - 4) == 'ruby') {
-                $('.title').text('Good luck tomorrow Ruby!') // Lub u Ruby :3 uwu ^.^ :PES_KindaCringe: https://i.imgur.com/l7GHB7U.png
-                $('#ruby').show();
-
-                return;
-            }
-            if (str.substring(str.length - 5) == 'debug') {
-                $('[cheat=debug]').show();
-                // dcon stuff ignore this
-
-                if (loading_time) {
-                    loading_time = 0;
-                    $('.item').on('click', function () {
-                        form.trigger('submit');
-                    });
-                    $('[type=checkbox]').on('change', function () {
-                        form.trigger('submit');
-                    });
-                }
-                return;
-            }
-        });
-    })();
-    (function () {
-        // custom animation because apple cant write good code
-        $('[type=checkbox]').on('change', function () {
-            if ($(this).is(':checked')) {
-                $(this).next().animate({
-                    left: '0%',
-                }, 100);
-            } else {
-                $(this).next().animate({
-                    left: '-100%',
-                }, 100);
-            }
-        });
-
-        // custom select input
-        $('body').find('.select-list .item').on('click', function () {
-            // find all items inside of the list you clicked on and remove the selected class from them
-            $(this).closest('.select-list').find('.selected').removeClass('selected');
-
-            // add the selected class to the item you clicked on
-            $(this).addClass('selected');
-
-            // change the value attribute of the list to the value of the item you clicked on
-            $(this).closest('.select-list').attr('value', $(this).attr('value'));
-        });
-
-        // set the default value for select lists to zero
-        $('.select-list').attr('value', 0);
-
-        form.on('submit', async function (e) {
-            e.preventDefault(); // stop it from trying to reach a server & refreshing the page.
-
-            // hide the notice
-            // form.find('#result').hide();
-
-            // show the loading icon and disable the ability to interact with the form
-            form.css({
-                opacity: 0.5, // fade out the UI
-                pointerEvents: 'none' // disable input
-            }).find('.loader').show();
-
-            // wait for 1 second to simulate loading
-            await waitFor(loading_time);
-
-            // define the base risk value
-            var risk = 0;
-
-            // find all selected checkboxs and add it's 'value' attribute to the risk variable
-            form.find('.select-list').each(function () {
-                risk += parseFloat($(this).attr('value'));
-            });
-            const cache = risk;
-            form.find('[type=checkbox]:checked').each(function () {
-                risk += ((cache * parseFloat($(this).attr('value'))) - cache);
-            });
-            if (risk < 0 && result_safty) risk = 0;
-            if (risk > 92 && result_safty) risk = 92;
-
-            // assign the result variable that contains the objects for text and color
-            var result;
-            if (risk > 0 || !risk) result = {
-                title: 'You should be fine',
-                color: 'rgba(14, 233, 203)',
-                background: 'rgba(14, 233, 203, 0.14)',
-            }
-            if (risk > 5) result = {
-                title: 'Take extra precautions',
-                color: 'rgba(255, 193, 55)',
-                background: 'rgba(255, 193, 55,0.14)',
-            }
-            if (risk > 30) result = {
-                title: 'You are at risk',
-                color: 'rgba(243, 83, 83)',
-                background: 'rgba(243, 83, 83, 0.14)',
-            }
-
-            // set the color and show the result notice
-            form.find('#result').css(result).fadeIn();
-            form.find('#result').find('.title').text(result.title);
-            form.find('#result').find('.risk').text((risk).toFixed(2));
-
-            // hide the loading icon and enable the ability to interact with the form
-            form.css({
-                opacity: '', // fade in the UI
-                pointerEvents: '' // enable input
-            }).find('.loader').hide();
-
-            if (loading_time) $('html, body').animate({scrollTop: $('#result').offset().top - 100}, 0);
-        });
-    })();
-</script>
-</body>
