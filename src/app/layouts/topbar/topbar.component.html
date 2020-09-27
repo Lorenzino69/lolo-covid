@@ -1,37 +1,15 @@
 <!-- Topbar Start -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-<div class="navbar-custom">
-    <span class="actu">
-                  <a routerLink="/actu" class="btn btn- waves-effect btn-warning d-block mx-auto float-left actu"><i
-                          class="fas fa-bookmark"></i>&nbsp;Actualités</a>
-</span>
-    <span class="actu">
-                  <a routerLink="/calculator" class="btn btn- waves-effect btn-warning d-block mx-auto float-left actu"><i
-                          class="fas fa-calculator"></i>&nbsp;Calculator</a>
-</span>
-    <div class="container-fluid">
-        <!-- LOGO -->
-        <div class="logo-box mx-auto">
-            <a routerLink="/" class="logo text-center">
-        <span class="logo-lg">
-          <img src="assets/images/logo-light.png" alt="" height="40">
-<!--              <span class="float-left">-->
-<!--                  <a routerLink="/actu" class="btn btn- waves-effect btn-warning d-block mx-auto"> <i-->
-<!--                          class="fas fa-bookmark"></i>Actualités</a>-->
-<!--                </span>-->
-        </span>
-                <span class="logo-sm">
-          <img src="assets/images/logo-light.png" alt="" height="40">
-<!--                    <span class="float-left">-->
-<!--                  <a [routerLink]="[ '/actu' ]" class="btn btn- waves-effect btn-warning d-block mx-auto"> <i-->
-<!--                          class="fas fa-bookmark"></i>Actualités</a>-->
-<!--                </span>-->
-        </span>
-
-            </a>
-        </div>
-    </div>
-</div>
+<mat-toolbar class="navbar-custom">
+    <a mat-button class="companyName" routerLink="/">
+        <span><i class="fas fa-bars"></i>&nbsp;Menu</span>
+    </a>
+    <span></span>
+        <a mat-button class="companyName" routerLink="/actu">
+            <span><i class="fas fa-bookmark"></i>&nbsp;Actualités</span>
+        </a>
+        <span></span>
+            <a mat-button routerLink="/calculator" class="companyName"><i class="fas fa-calculator">&nbsp;Calculator</i></a>
+        <span></span>
+</mat-toolbar>
 <!-- end Topbar -->
 

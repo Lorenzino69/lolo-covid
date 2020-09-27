@@ -1,165 +1,90 @@
-<!--<div class="container-fluid">-->
-<!--<mat-button-toggle-group name="fontStyle" aria-label="Font Style">-->
-<!--    <mat-button-toggle value="bold">Bold</mat-button-toggle>-->
-<!--    <mat-button-toggle value="italic">Italic</mat-button-toggle>-->
-<!--    <mat-button-toggle value="underline">Underline</mat-button-toggle>-->
-<!--</mat-button-toggle-group>-->
-<!--</div>-->
+
 <div class="container-fluid">
-    <div style="background-color: #445175; width: inherit; border-radius: 25px;">
+    <div class="calculatorcontainer">
         <h1 style="color: white; font-size: 45px; text-align: center; padding-top: 30px; font-weight: bolder;">
             <i class="fad fa-lungs-virus"></i>
             <span class="title">Calculateur</span>
         </h1>
-        <div class="container" style=" margin-bottom: 20px; ">
-
-            <div id="calculator" class="bg-navy-5 mb-4 pos-rel"
-                 style="min-height:400px;max-width: 700px;margin: auto;margin-top: 50px;border-radius: 20px;">
-                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="m-0">
-                    <div id="result" class="text-center mb-4 rounded-10"
-                         style="display:none; background: rgba(14, 233, 203, 0.14); color: rgba(14, 233, 203, 1); ">
-                        <h3 class="title font-weight-bold"></h3>
-                        <span class="message">You have an estimated <b><span class="risk">0</span>%</b> chance of <b>dying</b> from covid-19 if infected</span>
-                        <br>
-                        <br>
-                        <span>Please note this is just an estimation, and not an absolute assessment of the effects covid-19 might have on you.</span>
-                    </div>
-                    <!-- <h3 class="font-weight-bold mb-4">ncov2019 Health Checker | Are you at risk?</h3> -->
-
-
-                    <div class="col nopad mb-3">
-                        <h5 class="font-weight-bold mb-3">Age</h5>
-                        <div class="age">
-                            <mat-button-toggle-group formControlName= "age" name="fontStyle" aria-label="Font Style">
-                                <mat-button-toggle  value=".2"><span class="font-weight-bold">1-19</span>
-                                </mat-button-toggle>
-                                <mat-button-toggle  value=".3"><span class="font-weight-bold">20-39</span>
-                                </mat-button-toggle>
-                                <mat-button-toggle value="2.5"><span class="font-weight-bold">40-59</span>
-                                </mat-button-toggle>
-                                <mat-button-toggle  value="5"><span class="font-weight-bold">60-79</span>
-                                </mat-button-toggle>
-                                <mat-button-toggle  value="14.8"><span class="font-weight-bold">80-100+</span>
-                                </mat-button-toggle>
-                            </mat-button-toggle-group>
+        <div class="container">
+                        <mat-horizontal-stepper linear #stepper class="matstepper">
+                <mat-step [stepControl]="ageForm" [editable]="true">
+                    <form [formGroup]="ageForm">
+                        <ng-template matStepLabel>Age</ng-template>
+                        <div class="col nopad mb-3">
+                            <div class="age">
+                                <mat-button-toggle-group formControlName="age" name="fontStyle" aria-label="Font Style" required>
+                                    <mat-button-toggle value=".2" (click)="SelectionAge();"><span class="font-weight-bold">1-19</span>
+                                    </mat-button-toggle>
+                                    <mat-button-toggle value=".3" (click)="SelectionAge();"><span class="font-weight-bold">20-39</span>
+                                    </mat-button-toggle>
+                                    <mat-button-toggle value="2.5" (click)="SelectionAge();"><span class="font-weight-bold">40-59</span>
+                                    </mat-button-toggle>
+                                    <mat-button-toggle value="5" (click)="SelectionAge();"><span class="font-weight-bold">60-79</span>
+                                    </mat-button-toggle>
+                                    <mat-button-toggle value="14.8" (click)="SelectionAge();"><span class="font-weight-bold">80-100+</span>
+                                    </mat-button-toggle>
+                                </mat-button-toggle-group>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col nopad mb-4">
-                        <h5 class="font-weight-bold mb-3">Sexe</h5>
-                        <div class="text-center" type="gender">
-                            <mat-button-toggle-group formControlName= "sexe" name="fontStyle" aria-label="Font Style" ngDefaultControl>
-                                <mat-button-toggle value=".15"><span class="font-weight-bold">Homme</span>
-                                </mat-button-toggle>
-                                <mat-button-toggle  value=".035"><span class="font-weight-bold">Femme</span>
-                                </mat-button-toggle>
-                            </mat-button-toggle-group>
-
-
-
-
-<!--                            <div class="col px-2 mb-3" cheat="dcon" style="display:none;">-->
-<!--                                <div class="col item pt-3 pb-3 rounded-10" value="DCON">-->
-<!--                                    <span class="font-weight-bold">DCON</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col px-2 mb-3" cheat="avi" style="display:none;">-->
-<!--                                <div class="col item pt-3 pb-3 rounded-10" value="AVI">-->
-<!--                                    <span class="font-weight-bold">Avi</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col px-2 mb-3" cheat="elle" style="display:none;">-->
-<!--                                <div class="col item pt-3 pb-3 rounded-10" value="WEEB">-->
-<!--                                    <span class="font-weight-bold">Weeb</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                        <div>
+                            <button mat-button matStepperNext [disabled]="selectedStep1Option === false">Suivant</button>
                         </div>
-                    </div>
-                    <div class="col nopad mb-4">
-                        <h5 class="font-weight-bold mb-3">Avez vous une de ces maladies?</h5>
-                        <div class="form-group mb-2">
-<!--                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"-->
-<!--                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="10.5">-->
-<!--                            <label class="ml-2">Cardiovascular disease</label>-->
-                            <label class="example-margin">Vasculaire:&nbsp;&nbsp;</label>
-                            <mat-radio-group [(ngModel)]="cardio" formControlName="cardio" class="maladies">
-                                <mat-radio-button class="example-margin" value="10.5">Oui</mat-radio-button>
-                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="sexeForm" [editable]="false">
+                    <form [formGroup]="sexeForm">
+                        <ng-template matStepLabel required>Sexe</ng-template>
+                        <div class="col nopad mb-4">
+                            <div class="text-center sexe" type="gender">
+                                <mat-button-toggle-group formControlName="sexe" name="fontStyle" aria-label="Font Style"
+                                                         ngDefaultControl>
+                                    <mat-button-toggle value=".15" (click)="SelectionSexe();"><span class="font-weight-bold">Homme</span>
+                                    </mat-button-toggle>
+                                    <mat-button-toggle value=".035" (click)="SelectionSexe();"><span class="font-weight-bold">Femme</span>
+                                    </mat-button-toggle>
+                                </mat-button-toggle-group>
+                            </div>
+                        </div>
+                        <div>
+                            <button mat-button matStepperPrevious>Retour</button>
+                            <button mat-button matStepperNext  [disabled]="selectedStep2Option === false">Suivant</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="maladieForm" [editable]="false">
+                    <form [formGroup]="maladieForm">
+                        <ng-template matStepLabel>Maladies</ng-template>
+                        <div class="col nopad mb-4">
+                            <h5 class="font-weight-bold mb-3 maladies">Avez vous une de ces maladies?</h5>
+                            <div class="form-group mb-2">
+                                <label class="example-margin">Maladie Cardio Vasculaire:&nbsp;&nbsp;</label>
+                                <mat-slide-toggle formControlName="cardio" value="10.5" ></mat-slide-toggle>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="example-margin maladies">Diabète:&nbsp;&nbsp;</label>
 
-                            </mat-radio-group>
+                                <mat-slide-toggle formControlName="diabete" value="7.3" ></mat-slide-toggle>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="example-margin maladies">Maladie Respiratoire chronique:</label>
+                                <mat-slide-toggle formControlName="respiration" value="6.3" ></mat-slide-toggle>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="example-margin maladies">Hypertension:&nbsp;&nbsp;</label>
+                                <mat-slide-toggle formControlName="hypertension" value="6" ></mat-slide-toggle>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="example-margin maladies">Cancer:&nbsp;&nbsp;</label>
+                                <mat-slide-toggle formControlName="cancer" value="5.6" ></mat-slide-toggle>
+                            </div>
                         </div>
-                        <div class="form-group mb-3">
-                            <label class="example-margin">Diabète:&nbsp;&nbsp;</label>
-                            <mat-radio-group [(ngModel)]="diabete" formControlName="diabete">
-                                <mat-radio-button class="example-margin" value="7.3">Oui</mat-radio-button>
-                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
-
-                            </mat-radio-group>
+                        <div>
+                            <button mat-button matStepperPrevious>Retour</button>
+                            <button mat-raised-button type="submit" (click)="onSubmit()">Valider</button>
                         </div>
-                        <div class="form-group mb-3">
-                            <label class="example-margin">Respiratoire:</label>
-                            <mat-radio-group [(ngModel)]="respiration" formControlName="respiration">
-                                <mat-radio-button class="example-margin" value="6.3">Oui</mat-radio-button>
-                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
-
-                            </mat-radio-group>
-                        </div>
-                        <div class="form-group mb-3">
-<!--                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"-->
-<!--                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="6">-->
-<!--                            <label class="ml-2">Hypertension</label>-->
-                            <label class="example-margin">Hypertension:&nbsp;&nbsp;</label>
-                            <mat-radio-group [(ngModel)]="hypertension" formControlName="hypertension">
-                                <mat-radio-button class="example-margin" value="6">Oui</mat-radio-button>
-                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
-
-                            </mat-radio-group>
-                        </div>
-                        <div class="form-group mb-3">
-<!--                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"-->
-<!--                                   data-onstyle="success" data-offstyle="danger" data-size="md" value="5.6">-->
-<!--                            <label class="ml-2">Cancer</label>-->
-                            <label class="example-margin">Cancer:&nbsp;&nbsp;</label>
-                            <mat-radio-group [(ngModel)]="cancer" formControlName="cancer">
-                                <mat-radio-button class="example-margin" value="5.6">Oui</mat-radio-button>
-                                <mat-radio-button class="example-margin" value="0">Non</mat-radio-button>
-
-                            </mat-radio-group>
-                        </div>
-                        <div class="form-group mb-3" cheat="dcon" style="display:none;">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="lg" value="1337">
-                            <label class="ml-2">DCON</label>
-                        </div>
-                        <div class="form-group mb-3" cheat="avi" style="display:none;">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="lg" value="69">
-                            <label class="ml-2">Avi</label>
-                        </div>
-                        <div class="form-group mb-3" cheat="elle" style="display:none;">
-                            <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                   data-onstyle="success" data-offstyle="danger" data-size="lg" value="69">
-                            <label class="ml-2">Anger issues</label>
-                        </div>
-                    </div>
-
-                    <div class="col nopad mt-4">
-<!--                        <button type="submit" class="btn p-2 btn-primary btn-block rounded-10">Check <span-->
-<!--                                style=" width: 0px; display: inline-block; "><i-->
-<!--                                class="fad fa-spinner-third fa-spin loader" style="display:none;"></i></span></button>-->
-                        <button class="btn btn-primary mr-1">Tester</button>
-                    </div>
-                </form>
-            </div>
-            <!-- <p class="text-center" style="opacity:0.2">Demo by DCON for Avi</p> -->
-            <div class="col pb-2 text-center" style="opacity:0.5">
-                <p>Sources: <a
-                        href="https://informationisbeautiful.net/visualizations/covid-19-coronavirus-infographic-datapack/"
-                        target="_blank">covid-19-coronavirus-infographic-datapack</a>, <a
-                        href="https://ourworldindata.org/coronavirus" target="_blank">our world in data</a>, <a
-                        href="https://cov19.cc/" target="_blank">cov19</a></p>
-            </div>
-
+                    </form>
+                </mat-step>
+            </mat-horizontal-stepper>
         </div>
     </div>
-
 </div>

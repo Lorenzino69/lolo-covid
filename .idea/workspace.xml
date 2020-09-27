@@ -20,8 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33331b2-7ac3-4140-8343-845afed74607" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es2015.6f6c4ddcde4ef6e7f5d3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es5.6f6c4ddcde4ef6e7f5d3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ngsw.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ngsw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/styles.00e9a019d56c1078d59e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/actu/actu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/actu/actu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/custom/structure/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/custom/structure/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/custom/structure/_horizontal-nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/custom/structure/_horizontal-nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/custom/structure/_topbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/custom/structure/_topbar.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600988855807</updated>
       <workItem from="1600988865768" duration="3649000" />
-      <workItem from="1601154198891" duration="13161000" />
+      <workItem from="1601154198891" duration="23273000" />
     </task>
     <servers />
   </component>
@@ -120,10 +137,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="431" key="#TSLint/0.0.1920.1040@0.0.1920.1040" timestamp="1600989417124" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1600992703097">
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1601246483371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600992703097" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601246483371" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1601239906684">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601239906684" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600992394295">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

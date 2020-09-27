@@ -34,6 +34,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogCalculatorComponent } from './pages/dialog-calculator/dialog-calculator.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   };
@@ -65,7 +68,8 @@ export function HttpLoaderFactory(http: HttpClient){
         deps: [HttpClient]
       }
     }), MatCardModule, MatButtonToggleModule, MatRadioModule,
-    MatButtonModule, MatCheckboxModule, FormsModule, ReactiveFormsModule,MatDialogModule
+    MatButtonModule, MatCheckboxModule, FormsModule, ReactiveFormsModule,MatDialogModule,MatStepperModule,MatSlideToggleModule,
+    MatToolbarModule
 
   ],entryComponents: [
     DialogCalculatorComponent

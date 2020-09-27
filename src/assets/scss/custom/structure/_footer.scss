@@ -5,10 +5,11 @@
 .footer {
     bottom: 0;
     padding: 19px 15px 20px;
-    position: relative;
+    position: absolute;
     right: 0;
     color: $gray-600;
     left: 0;
+    //margin-top:auto;
     background-color: darken($body-bg,2.5%);
 
     .footer-links {

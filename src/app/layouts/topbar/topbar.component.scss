@@ -2,3 +2,51 @@
   margin-top:15px !important;
   //margin-right:5px !important;
 }
+
+.toolbar{
+  background-color: #282e38 !important;
+}
+
+.companyName{
+  font-size: 150%;
+  color:#f7f7f7;
+}
+
+
+
+
+
+/* =============
+    Responsive
+ =============== */
+
+/* Large desktops and laptops */
+@media (min-width: 1201px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .companyName{
+    font-size: 75%;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .companyName{
+    font-size: 75%;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .companyName{
+    font-size: 75%;
+  }
+}

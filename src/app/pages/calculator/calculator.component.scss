@@ -2,15 +2,95 @@
   margin: 0 10px;
   text-align:center;
   align-items:center;
+  color:black;
 }
 
 .maladies{
-
+color:black;
 }
 
 .age{
  //font-size:0.6rem !important;
+  text-align:center;
 }
 .title{
   margin-top:20px !important;
+}
+.sexe{
+  margin-top:20px;
+}
+
+.matstepper{
+  background-color: rgba(14, 233, 203, 0.34);
+  border-radius: 25px;
+  margin-bottom:20px;
+}
+.calculatorcontainer{
+  background-color: #445175;
+  width: inherit;
+  border-radius: 25px;
+  //height:350px !important;
+  height:inherit;
+}
+
+/* =============
+    Responsive
+ =============== */
+
+/* Large desktops and laptops */
+@media (min-width: 1201px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-fluid{
+    padding-left:0;
+    padding-right:0;
+  }
+  .matstepper{
+    background-color: rgba(14, 233, 203, 0.34);
+    border-radius: 25px;
+    margin-bottom:20px;
+    font-size:0.7rem;
+  }
+  .container{
+    padding: 0;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container-fluid{
+    padding-left:0;
+    padding-right:0;
+  }
+  .matstepper{
+    background-color: rgba(14, 233, 203, 0.34);
+    border-radius: 25px;
+    margin-bottom:20px;
+    font-size:0.7rem;
+  }
+  .container{
+    padding: 0;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .container-fluid{
+    padding-left:0;
+    padding-right:0;
+  }
+  .matstepper{
+    font-size:0.7rem;
+  }
+  .container{
+    padding: 0;
+  }
 }
