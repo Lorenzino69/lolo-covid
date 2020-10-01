@@ -20,33 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33331b2-7ac3-4140-8343-845afed74607" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Covid-19-Statistics-Dashboard-Angular-9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Covid-19-Statistics-Dashboard-Angular-9.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/assets/i18n/fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/i18n/fr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/images/preview.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main-es2015.2330023edf8d7174810e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main-es5.2330023edf8d7174810e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es2015.f838296b2bb81823860b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es5.f838296b2bb81823860b.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/ngsw.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ngsw.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/getdata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/getdata.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/layout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/topbar/topbar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/actu/actu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/actu/actu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/actu/actu.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/actu/actu.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/actu/actu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/actu/actu.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/country/country.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/country/country.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/actu.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/actu.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/i18n/fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/fr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/preview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +108,22 @@
       <option name="presentableId" value="Default" />
       <updated>1600988855807</updated>
       <workItem from="1600988865768" duration="3649000" />
-      <workItem from="1601154198891" duration="31587000" />
+      <workItem from="1601154198891" duration="33303000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -150,10 +142,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="431" key="#TSLint/0.0.1920.1040@0.0.1920.1040" timestamp="1600989417124" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1601575917489">
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1601576271811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601575917489" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601576271811" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1601239906684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

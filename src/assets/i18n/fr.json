@@ -35,7 +35,7 @@
             "1": "Cas",
             "2": "Infections",
             "3": "Décès",
-            "4": "Récupérations",
+            "4": "Guérison",
             "5": "Critique",
             "6": "aujourd'hui",
             "7": "par million",
@@ -50,7 +50,7 @@
         },
         "Rates": {
             "1": "Taux d'infection",
-            "2": "Taux de récupération",
+            "2": "Taux de guérison",
             "3": "Taux de mortalité",
             "4": "Taux critique",
             "5": "Cas légers"
@@ -102,7 +102,7 @@
             "12": "Fabriqué",
             "13": "par",
             "14": "Actif",
-            "15": "Récupéré",
+            "15": "guéri",
             "16": "Décès",
             "17": "Critique",
             "18": "Statistiques",
