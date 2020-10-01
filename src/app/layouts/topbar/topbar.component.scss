@@ -1,18 +1,18 @@
-.actu{
-  margin-top:15px !important;
+.actu {
+  margin-top: 15px !important;
   //margin-right:5px !important;
 }
 
-.toolbar{
+.toolbar {
   background-color: #282e38 !important;
 }
 
-.companyName{
+.companyName {
   font-size: 150%;
-  color:#f7f7f7;
+  color: #f7f7f7;
+  font-family: 'Rubik',
+  sans-serif;
 }
-
-
 
 
 
@@ -32,21 +32,21 @@
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-  .companyName{
+  .companyName {
     font-size: 75%;
   }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  .companyName{
+  .companyName {
     font-size: 75%;
   }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-  .companyName{
+  .companyName {
     font-size: 75%;
   }
 }

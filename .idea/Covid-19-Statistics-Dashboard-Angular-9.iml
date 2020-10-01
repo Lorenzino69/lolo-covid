@@ -8,5 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="button.prod" level="application" />
+    <orderEntry type="library" name="widget.prod" level="application" />
   </component>
 </module>

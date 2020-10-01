@@ -27,11 +27,11 @@
                             </div>
                         </div>
                         <div>
-                            <button mat-button matStepperNext [disabled]="selectedStep1Option === false">Suivant</button>
+                            <button mat-raised-button matStepperNext [disabled]="selectedStep1Option === false">Suivant</button>
                         </div>
                     </form>
                 </mat-step>
-                <mat-step [stepControl]="sexeForm" [editable]="false">
+                <mat-step [stepControl]="sexeForm" [editable]="true">
                     <form [formGroup]="sexeForm">
                         <ng-template matStepLabel required>Sexe</ng-template>
                         <div class="col nopad mb-4">
@@ -46,12 +46,12 @@
                             </div>
                         </div>
                         <div>
-                            <button mat-button matStepperPrevious>Retour</button>
-                            <button mat-button matStepperNext  [disabled]="selectedStep2Option === false">Suivant</button>
+                            <button mat-raised-button matStepperPrevious>Retour</button>
+                            <button mat-raised-button matStepperNext  [disabled]="selectedStep2Option === false">Suivant</button>
                         </div>
                     </form>
                 </mat-step>
-                <mat-step [stepControl]="maladieForm" [editable]="false">
+                <mat-step [stepControl]="maladieForm" [editable]="true">
                     <form [formGroup]="maladieForm">
                         <ng-template matStepLabel>Maladies</ng-template>
                         <div class="col nopad mb-4">
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                         <div>
-                            <button mat-button matStepperPrevious>Retour</button>
+                            <button mat-raised-button matStepperPrevious>Retour</button>
                             <button mat-raised-button type="submit" (click)="onSubmit()">Valider</button>
                         </div>
                     </form>

@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h2 class="text-center mt-3 mb-3" *ngIf="country">
     <img 
-    width="100px" src="assets/flags/{{countryCodes[country.country].toLowerCase()}}.svg" alt="{{country.country}}"> {{country.country}}'s {{ 'Shared.Other.18' | translate }}</h2>
+    width="100px" src="assets/flags/{{countryCodes[country.country].toLowerCase()}}.svg" alt="{{country.country}}"> {{country.country}} {{ 'Shared.Other.18' | translate }}</h2>
     <div class="row">
       <div class="col-xl-3 col-md-6 col-6">
         <div class="card-box">
@@ -214,7 +214,7 @@
                       <i class="fas fa-circle-notch fa-spin m-2 text-info"></i>
                     </div>
                     <h2 [class.d-none]="isLoading" class="font-weight-normal text-info">{{(100-(totalCritical / activeCases * 100)) | number:'.1-2'}}%</h2>
-                    <h5>{{ 'Shared.Rates.4' | translate }}</h5>
+                    <h5>{{ 'Shared.Rates.5' | translate }}</h5>
                   </div>
                 </div>
               </div>

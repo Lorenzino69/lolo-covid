@@ -11,7 +11,10 @@
             "8": "Today Deaths",
             "9": "Total Recoveries",
             "10": "Cases",
-            "11": "Deaths"
+            "11": "Deaths",
+            "12": "Home",
+            "13": "News",
+            "14": "Calculator"
         },
         "WorldMap": {
             "1": "Worldwide Infections",
@@ -96,7 +99,7 @@
             "9": "Share with your friends, family or coworkers.",
             "10": "Keep them up to date with the coronavirus outbreak.",
             "11": "Contact Me",
-            "12": "Crafted with",
+            "12": "Crafted",
             "13": "by",
             "14": "Active",
             "15": "Recovered",

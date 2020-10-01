@@ -11,7 +11,10 @@
             "8": "Today Deaths",
             "9": "Total des recouvrements",
             "10": "Cas",
-            "11": "Décès"
+            "11": "Décès",
+            "12": "Menu",
+            "13": "Actualités",
+            "14": "Calculateur"
         },
         "WorldMap": {
             "1": "Infections mondiales",
@@ -81,7 +84,7 @@
                 "3": "Nettoyez et désinfectez quotidiennement les surfaces fréquemment touchées. Cela comprend les tables, les poignées de porte, les interrupteurs d'éclairage, les comptoirs, les poignées, les bureaux, les téléphones, les claviers, les toilettes, les robinets et les éviers. Si les surfaces sont sales, nettoyez-les: utilisez un détergent ou du savon et de l'eau avant la désinfection. "
             },
             "buttonNext": "Prochain",
-            "buttonClose": "Proche",
+            "buttonClose": "Fermer",
             "dontShowText": "Ne plus montrer"
         },
         "Other": {

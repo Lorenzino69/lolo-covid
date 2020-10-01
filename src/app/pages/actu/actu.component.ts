@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActuService} from '../../shared/actu.service';
 
+
 @Component({
   selector: 'app-actu',
   templateUrl: './actu.component.html',
@@ -13,8 +14,8 @@ export class ActuComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.actuservice.getActu()
-        .subscribe(
+
+    this.actuservice.getActu().subscribe(
             res => {
               this.data= res.articles;
 

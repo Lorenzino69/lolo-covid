@@ -1,15 +1,16 @@
 <!-- Topbar Start -->
 <mat-toolbar class="navbar-custom">
     <a mat-button class="companyName" routerLink="/">
-        <span><img src="assets/images/favicon-32x32.png">&nbsp;Menu</span>
+        <span class ="fontbutton"><img src="assets/images/favicon-32x32.png">&nbsp;{{ 'Home.AffectedCountries.12' | translate }}</span>
     </a>
-    <span></span>
+<!--    <span></span>-->
         <a mat-button class="companyName" routerLink="/actu">
-            <span><i class="fas fa-bookmark"></i>&nbsp;Actualités</span>
+            <span><i class="fas fa-bookmark"></i>&nbsp;{{ 'Home.AffectedCountries.13' | translate }}</span>
         </a>
-        <span></span>
-            <a mat-button routerLink="/calculator" class="companyName"><i class="fas fa-calculator">&nbsp;Calculator</i></a>
-        <span></span>
+<!--        <span></span>-->
+    <a mat-button routerLink="/calculator" class="companyName"><span><i class="fas fa-calculator"></i>&nbsp;{{ 'Home.AffectedCountries.14' | translate }}</span></a>
+<!--        <span></span>-->
+<!--    <img src="assets/images/logo.jpg">-->
 </mat-toolbar>
 <!-- end Topbar -->
 
