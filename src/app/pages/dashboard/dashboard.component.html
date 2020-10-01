@@ -1,8 +1,5 @@
 <div class="container-fluid">
-<!--   <span class="float-left">-->
-<!--                  <a routerLink="/actu" class="btn btn- waves-effect btn-warning d-block mx-auto"> <i-->
-<!--                          class="fas fa-bookmark"></i>Actualités</a>-->
-<!--</span>-->
+
   <div *ngIf="isModalShown" [config]="{ show: true }" (onHidden)="onHidden()" bsModal #autoShownModal="bs-modal"
     class="modal fade d-block" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
     <div class="modal-dialog modal-dialog-centered">
