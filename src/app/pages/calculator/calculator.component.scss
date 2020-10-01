@@ -33,6 +33,16 @@ color:black;
   height:inherit;
 }
 
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
 /* =============
     Responsive
  =============== */

@@ -20,12 +20,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33331b2-7ac3-4140-8343-845afed74607" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/canvg-es2015.80bfde5c52e2da41ae72.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/canvg-es5.80bfde5c52e2da41ae72.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-brands-400.4b115e1153a9ea339d6a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-brands-400.650c3a83e51f01868115.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-brands-400.b90365bccdabd68c6c03.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-brands-400.c39278f7abfc798a2415.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-brands-400.d9d17590c975aad1be0d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-regular-400.1f65fad32ac9d1bc04ac.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-regular-400.414ff5daad323a1c47c5.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-regular-400.5dd3976cb5d61e2e561f.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-regular-400.65779ebcc35604a25c2b.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-regular-400.f6c6f6c8cb7784254ad0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-solid-900.462806316fea535a6a57.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-solid-900.61969d433bf265b9717a.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-solid-900.b5596f4d339f99e3d69b.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-solid-900.b70cea0339374107969e.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fa-solid-900.b9bd91a94665aa8013d6.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main-es2015.4a7e9ffdb32d5a7fafef.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/materialdesignicons-webfont.02a3863dd9755dc4990d.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/materialdesignicons-webfont.1993c4a16cce5446a5cf.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/materialdesignicons-webfont.26333b3884782fdb5f8c.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/materialdesignicons-webfont.af3f6dbe172a9c1aba77.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/materialdesignicons-webfont.baded94134f273450a47.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/pdfmake-es2015.452ea603e3a8a95bd1fe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/pdfmake-es5.452ea603e3a8a95bd1fe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/polyfills-es2015.df298c6178f253d8b1f6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/polyfills-es5.3b086f6b57ed956ec1ac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/runtime-es2015.af4d9489ecf134322162.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/runtime-es5.af4d9489ecf134322162.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/styles.d6e84eb53545e03d8569.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/xlsx-es2015.c9d5afab9d8a02b620bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/xlsx-es5.c9d5afab9d8a02b620bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/actu/actu.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/actu/actu.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/calculator/calculator.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/country/country.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/country/country.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/country/country.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/country/country.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dialog-calculator/dialog-calculator.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/fr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/custom/components/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/custom/components/_badge.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600988855807</updated>
       <workItem from="1600988865768" duration="3649000" />
-      <workItem from="1601154198891" duration="36669000" />
+      <workItem from="1601154198891" duration="39750000" />
     </task>
     <servers />
   </component>
@@ -139,10 +180,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="431" key="#TSLint/0.0.1920.1040@0.0.1920.1040" timestamp="1600989417124" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1601583145558">
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1601590411031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601583145558" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601590411031" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1601581453534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

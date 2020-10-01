@@ -51,3 +51,48 @@
 .mat-card-subtitle{
   color:white !important;
 }
+
+
+
+/* =============
+    Responsive
+ =============== */
+
+/* Large desktops and laptops */
+@media (min-width: 1201px) {
+  .articleImage{
+
+    margin-bottom: 20px ;
+  }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .articleImage{
+
+    margin-bottom: 20px ;
+  }
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .articleImage{
+
+    margin-bottom: 20px ;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .articleImage{
+    margin-bottom: 20px ;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .articleImage{
+    margin-bottom: 20px ;
+  }
+}

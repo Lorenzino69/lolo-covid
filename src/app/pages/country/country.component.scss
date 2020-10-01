@@ -1,3 +1,55 @@
 .bg-d {
     background-color: #282d37;
 }
+
+.size{
+    font-weight: 400 !important;
+}
+
+
+
+
+/* =============
+    Responsive
+ =============== */
+
+/* Large desktops and laptops */
+@media (min-width: 1201px) {
+    .articleImage{
+
+        margin-bottom: 20px ;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .articleImage{
+
+        margin-bottom: 20px ;
+    }
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .size{
+        font-weight: 400 !important;
+        font-size: 1.475rem !important;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .size{
+        font-weight: 400 !important;
+        font-size: 1.475rem !important;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .size{
+        font-weight: 400 !important;
+        font-size: 1.475rem !important;
+    }
+}

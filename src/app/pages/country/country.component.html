@@ -15,7 +15,7 @@
   
               <span class="badge badge-blue badge-pill float-md-left m-md-3 mt-2">{{(totalCases / finishedCases) | number:'.1-2'}}%<i class="mdi mdi-trending-up"></i>
               </span>
-              <h2 class="font-weight-normal"> {{totalCases | number}} </h2>
+              <h2 class="size"> {{totalCases | number}} </h2>
               <p class="text-muted">{{todayCases}} {{ 'Shared.TopCards.6' | translate }}</p>
             </div>
             <div class="progress progress-bar-alt-blue progress-sm m-0">
@@ -40,7 +40,7 @@
               <span
                 class="badge badge-danger badge-pill float-md-left m-md-3 mt-2">{{(totalDeaths / finishedCases * 100) | number:'.1-2'}}%
                 <i class="mdi mdi-trending-up"></i> </span>
-              <h2 class="font-weight-normal"> {{totalDeaths | number}} </h2>
+              <h2 class="size"> {{totalDeaths | number}} </h2>
               <p class="text-muted">{{todayDeaths}} {{ 'Shared.TopCards.6' | translate }}</p>
             </div>
             <div class="progress progress-bar-alt-danger progress-sm m-0">
@@ -65,7 +65,7 @@
               <span
                 class="badge badge-success badge-pill float-md-left m-md-3 mt-2">{{(totalRecoveries / finishedCases * 100) | number:'.1-2'}}%
                 <i class="mdi mdi-trending-up"></i> </span>
-              <h2 class="font-weight-normal"> {{totalRecoveries | number}} </h2>
+              <h2 class="size"> {{totalRecoveries | number}} </h2>
               <p class="text-muted">{{activeCases | number}} {{ 'Shared.TopCards.8' | translate }}</p>
             </div>
             <div class="progress progress-bar-alt-success progress-sm m-0">
@@ -91,7 +91,7 @@
               <span
                 class="badge badge-warning badge-pill float-md-left m-md-3 mt-2">{{(totalCritical / activeCases * 100) | number:'.1-2'}}%
                 <i class="mdi mdi-trending-up"></i> </span>
-              <h2 class="font-weight-normal"> {{totalCritical | number}} </h2>
+              <h2 class="size"> {{totalCritical | number}} </h2>
               <p class="text-muted">{{casesPer1M | number}} {{ 'Shared.TopCards.7' | translate }}</p>
             </div>
             <div class="progress progress-bar-alt-warning progress-sm m-0">

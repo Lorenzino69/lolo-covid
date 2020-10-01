@@ -131,17 +131,17 @@ export class CalculatorComponent implements OnInit {
     if (this.risk > 0 || !this.risk) this.result = {
       title: 'Tu devrais aller bien',
       color: 'rgba(14, 233, 203)',
-      background: 'rgba(14, 233, 203, 0.34)',
+      background: 'rgba(14, 233, 203, 0.75)',
     }
     if (this.risk > 5) this.result = {
       title: 'Prenez des précautions',
       color: 'rgba(255, 193, 55)',
-      background: 'rgba(255, 193, 55,0.34)',
+      background: 'rgba(255, 193, 55,0.75)',
     }
     if (this.risk > 30) this.result = {
       title: 'vous courez un risque',
       color: 'rgba(243, 83, 83)',
-      background: 'rgba(243, 83, 83, 0.34)',
+      background: 'rgba(243, 83, 83, 0.75)',
     }
 
     const dialogRef =this.dialog.open(DialogCalculatorComponent, {
