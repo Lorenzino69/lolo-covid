@@ -304,7 +304,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     let chartMap = am4core.create("worldChart", am4maps.MapChart);
     // Set map definition
     chartMap.geodata = am4geodata_worldLow;
-    
+
     // Set projection
     chartMap.projection = new am4maps.projections.Miller();
 
@@ -315,14 +315,14 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
     polygonSeries.nonScalingStroke = true;
     polygonSeries.strokeWidth = 0.5;
     polygonSeries.calculateVisualCenter = true;
-    
+
     let imageSeries = chartMap.series.push(new am4maps.MapImageSeries());
     imageSeries.data = mapData;
     imageSeries.dataFields.value = "value";
-    
+
     let imageTemplate = imageSeries.mapImages.template;
     imageTemplate.nonScaling = true
-    
+
     let circle = imageTemplate.createChild(am4core.Circle);
     circle.fillOpacity = 0.7;
     circle.propertyFields.fill = "color";
@@ -339,7 +339,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       "max": 30,
       "dataField": "value"
     })
-    
+
     imageTemplate.adapter.add("latitude", function (latitude, target) {
       let polygon = polygonSeries.getPolygonById(target.dataItem.dataContext["id"]);
       if (polygon) {
@@ -347,7 +347,7 @@ export class DashboardComponent implements OnInit, OnDestroy, DoCheck {
       }
       return latitude;
     })
-    
+
     imageTemplate.adapter.add("longitude", function (longitude, target) {
       let polygon = polygonSeries.getPolygonById(target.dataItem.dataContext["id"]);
       if (polygon) {
