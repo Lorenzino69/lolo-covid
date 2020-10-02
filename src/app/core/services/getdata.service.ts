@@ -10,7 +10,7 @@ import { Observable, throwError } from 'rxjs';
 export class GetdataService {
 
   constructor(private _http: HttpClient) { }
-  private host = "http://coronatrackings.web.app"
+  private host = "https://coronatrackings.web.app"
 
   getAll(type): Observable<Country>{
     return this._http.get<Country>(`${this.host}/countries?sort=${type}`).pipe(
