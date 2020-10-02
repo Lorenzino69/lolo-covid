@@ -4,14 +4,13 @@ import { retry, catchError } from 'rxjs/operators';
 import { Country } from '../models/country';
 import { Observable, throwError } from 'rxjs';
 
-HttpClient
 @Injectable({
   providedIn: 'root'
 })
 export class GetdataService {
 
   constructor(private _http: HttpClient) { }
-  private host = "https://api.coronastatistics.live"
+  private host = "http://coronatrackings.web.app"
 
   getAll(type): Observable<Country>{
     return this._http.get<Country>(`${this.host}/countries?sort=${type}`).pipe(
